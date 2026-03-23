@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+import { formatDate, isoDate } from '../../lib/utils';
+
+export async function getStaticPaths() {
+  const episodes = await getCollection('podcast', ({ data }) => !data.draft);
+  return episodes.map(ep => ({ params: { slug: ep.id }, props: { ep } }));
+}
+
+const { ep } = Astro.props;
+const { Content } = await render(ep);
+---
+
+<BaseLayout
+  title={ep.data.title}
+  description={ep.data.description}
+  ogImage={ep.data.artwork}
+>
+  <div class="page-top">
+    <div class="container container--narrow">
+      <header class="article-header">
+        <a href="/podcast" class="article-header__back">← Games as a Podcast</a>
+
+        <p class="article-header__category">
+          {ep.data.episodeNumber != null && `Episode ${ep.data.episodeNumber}`}
+          {ep.data.season != null && ` · Season ${ep.data.season}`}
+        </p>
+
+        <h1 class="article-header__title">{ep.data.title}</h1>
+
+        <div class="article-header__meta">
+          <time datetime={isoDate(ep.data.date)}>{formatDate(ep.data.date)}</time>
+          {ep.data.duration && <span>{ep.data.duration}</span>}
+        </div>
+      </header>
+
+      <!-- Audio player -->
+      <div class="audio-player" style="margin-bottom: 2.5rem;">
+        <audio controls preload="metadata" style="width: 100%; height: 48px; border-radius: 8px;">
+          <source src={ep.data.audioUrl} type="audio/mpeg" />
+          Your browser does not support audio playback.
+          <a href={ep.data.audioUrl}>Download episode</a>
+        </audio>
+      </div>
+
+      <!-- Show notes / body -->
+      <article class="prose">
+        {ep.data.description && <p><strong>{ep.data.description}</strong></p>}
+        <Content />
+      </article>
+
+      <nav style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border);">
+        <a href="/podcast" class="article-header__back">← All Episodes</a>
+      </nav>
+    </div>
+  </div>
+</BaseLayout>

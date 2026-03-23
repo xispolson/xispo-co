@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+import { formatDate, isoDate } from '../../lib/utils';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('journal', ({ data }) => !data.draft);
+  return posts.map(post => ({ params: { slug: post.id }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<BaseLayout
+  title={post.data.title}
+  description={post.data.excerpt}
+>
+  <div class="page-top">
+    <div class="container container--narrow">
+      <header class="article-header">
+        <a href="/journal" class="article-header__back">
+          ← Journal
+        </a>
+
+        {post.data.categories.length > 0 && (
+          <div style="margin-bottom: 0.75rem;">
+            {post.data.categories.map(cat => (
+              <a href={`/journal/category/${cat}`} class="article-header__category">{cat}</a>
+            ))}
+          </div>
+        )}
+
+        <h1 class="article-header__title">{post.data.title}</h1>
+
+        <div class="article-header__meta">
+          <time datetime={isoDate(post.data.date)}>{formatDate(post.data.date)}</time>
+        </div>
+
+        {post.data.tags.length > 0 && (
+          <div class="post-list__tags" style="margin-top: 1rem;">
+            {post.data.tags.map(tag => (
+              <span class="tag">{tag}</span>
+            ))}
+          </div>
+        )}
+      </header>
+
+      <article class="prose">
+        <Content />
+      </article>
+
+      <nav style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border);">
+        <a href="/journal" class="article-header__back">← Back to Journal</a>
+      </nav>
+    </div>
+  </div>
+</BaseLayout>

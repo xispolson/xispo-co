@@ -1,0 +1,23 @@
+---
+title: "Weekend update+"
+date: 2006-04-23
+categories: ["film", "goings-on", "ramblings"]
+tags: []
+draft: false
+---
+
+I've finally received a jolt of motivation and I have to say it feels good. I've been kind of low-energy/initiative for the past few months. Some of it stems from a bit of post-Dad depression, I think. Also, I've been hobbling around on a bum knee for several months. I went and got an MRI which revealed that I have two small meniscal tears in my left knee. Not bad as far as knee injuries go (better than, say, a torn ACL), but still no fun to deal with. The doctor recommended a rather simple relatively non-invasive surgery (arthroscopic). That really didn't sit so well with me, so he gave me a shot of cortizone instead, which was supposed to help with swelling. It actually did help a bunch and let me go have a great time down in Mexico with Deborah. However, after about a month, the tweak sensation came back.Yay. So now I'm seriously thinking about the surgery. I really haven't been able to get any excercise for fear of hurting myself. As a result, I've felt kind of sluggy. One positive is that I've tried accupuncture a few times. It's helped with the knee a bit (more pain management than anything else), but I have to say the best benefit has been stress reduction. I love them needles! Which is funny, because I used to pass out when I got shots, so I'm a bit nervous around the needles. I neglected to tell that to the accupuncturist until she had sunk about four needles into me, heh. It went fine and I definitely plan to get treatment from time to time. The treatment definitely makes me feel good afterward. Almost stoned, actually.
+
+_
+
+Friday, Bill, Vadan and I went to a Guinness tasting in the Financial District after work. It was some semi-cheesy marketing thing that turned out to be pretty fun. Well, they were pretty generous about the beer anyway and had a small buffet of nibbles. We sat at large round tables in an oak-panelled banquet hall and listened to some guy yammer on about Guinness while we kicked back some frothy goodness. We took bets on how much/little the guy made shilling beer. It wasn't a hard sell really--more of an infomation session. Learned a few things, like: Guinness is nitrogenated. That's where the bubbles come into play and that's what's in the draft cans and bottles. Also--you are supposed to pour the cans into a glass and drink straight from the bottles. It has less calories than Corona or Heineken. The final "take away" was that I walked out with a few Guinness glasses for the home collection. Pretty fun time, all in all. 
+
+_
+
+Made a quick stop at Cassanova for another drink before heading out to meet Deborah on the BART. We treked to Embarcadero Cinema to meet a friend to see [Brick](http://brickmovie.net/). I had seen the trailer some time ago and remember it being interesting. Well, it was interesting up to a point, but I can't say that I'd recommend the movie. Of course, I was a little tipsy, so that might have a bit of an effect. The movie defiinitely gets style points and some originality points--it's a total Noir film with a modern day high school setting. The kid from 3rd Rock in the Sun (who I loved in Mysterious Skin -- that's a great film), plays a kid who tries to unravel the circumstances behind his ex-girlfriend's death. She had fallen in with the bad crowd (gang-bangers, drug dealers, etc) and was in deep. The movie starts with him staring at her dead body face down near a drainage tunnel and then re-winds two days. The dialogue is definitely noir-ish, which makes for some humerous moments--the Vice Principle's exchange with Brenden is particularly funny, but I felt a bit too jerked between humor and serious to really get affected by either. Again, high marks for originality, but sticking so closely to such a campy formula lost its appeal to me. **  
+
+Saturday, I puttered around on the computer for a bit (including setting up a blog for my niece-to-be). Sister's due in August and they already have a name: Abigail. And [here's her blog](http://xis.typepad.com/abigail)--nothing fancy. I also spent some time on MySpace. We are gearing up for a redesign of Sega.com and wanted to see what kinds of things we might be able to include on the next version of the site. The site is pretty interesting--much more flexible than Friendster. Of course, that leads to some really ugly pages, heh. But I guess the key is letting folks do what they want. Even if it does sometimes [assault](http://www.myspace.com/mick63) [the eyes](http://www.myspace.com/philrooq).
+
+Ok, signing off for now. Going to go try to swim...
+
+Cheerio.

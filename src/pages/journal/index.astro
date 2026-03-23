@@ -1,0 +1,73 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { formatDate, isoDate, truncate } from '../../lib/utils';
+
+const allPosts = (await getCollection('journal', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+// Group by year
+const byYear = allPosts.reduce<Record<string, typeof allPosts>>((acc, post) => {
+  const year = String(post.data.date.getFullYear());
+  (acc[year] ??= []).push(post);
+  return acc;
+}, {});
+
+const years = Object.keys(byYear).sort((a, b) => Number(b) - Number(a));
+
+// All unique categories
+const allCategories = [...new Set(allPosts.flatMap(p => p.data.categories))].sort();
+---
+
+<BaseLayout title="Journal" description="Writing, musings, and notes going back to 2005.">
+  <div class="page-top">
+    <div class="container container--narrow">
+      <div class="section__header">
+        <h1 class="section__title">Journal</h1>
+        <span class="text-muted" style="margin-left: auto; font-size: var(--size-sm);">
+          {allPosts.length} posts
+        </span>
+      </div>
+
+      {allCategories.length > 0 && (
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2.5rem;">
+          {allCategories.map(cat => (
+            <a href={`/journal/category/${cat}`} class="tag">{cat}</a>
+          ))}
+        </div>
+      )}
+
+      {years.map(year => (
+        <section style="margin-bottom: 3rem;">
+          <h2 style="font-size: var(--size-sm); letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-faint); margin-bottom: 1rem; font-weight: 600;">
+            {year}
+          </h2>
+          <ul class="post-list">
+            {byYear[year]!.map(post => (
+              <li class="post-list__item">
+                <time class="post-list__date" datetime={isoDate(post.data.date)}>
+                  {formatDate(post.data.date)}
+                </time>
+                <div>
+                  <a href={`/journal/${post.id}`} class="post-list__title">
+                    {post.data.title}
+                  </a>
+                  {post.data.excerpt && (
+                    <p class="post-list__excerpt">{truncate(post.data.excerpt, 120)}</p>
+                  )}
+                  {post.data.categories.length > 0 && (
+                    <div class="post-list__tags" style="margin-top: 0.25rem;">
+                      {post.data.categories.map(cat => (
+                        <a href={`/journal/category/${cat}`} class="tag">{cat}</a>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </div>
+  </div>
+</BaseLayout>

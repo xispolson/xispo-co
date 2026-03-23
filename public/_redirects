@@ -1,0 +1,10 @@
+# Old WordPress slug patterns → new routes
+/blog/:slug         /journal/:slug      301
+/category/:slug     /journal/category/:slug  301
+
+# gamesasapodcast.com domain-level redirect
+# (set this as a Cloudflare Pages redirect rule for that domain)
+# https://gamesasapodcast.com/*  https://xispo.co/podcast/:splat  301
+
+# Trailing slash normalisation
+/:path/             /:path              301

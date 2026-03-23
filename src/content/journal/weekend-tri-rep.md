@@ -1,0 +1,25 @@
+---
+title: "Weekend (Tri) Report"
+date: 2005-06-16
+categories: ["goings-on", "tri"]
+tags: []
+draft: false
+---
+
+Man it's hard to stay on top of these things. I'm not sure to split catching up into several posts or to jam 'em all together. Not that it really matters, I guess...
+
+Lessee here... I guess I'll do it chrono style, instead of the backwards blog way...
+
+**Saturday** **I woke up hella early (like 6:45) to get picked up to go out to Marin for a group training session. Fortunately, my mentor lives reasonably close and was gracious enough to pick me up. We bopped out to Redwood High School in her Mini, pretending to be awake. Today was a swim/bike session. I felt good that I had gone for a swim workout that week, but was a bit surprised that some sadist had decided to put me into the fast swimmer group. I did not belong there. Those people dogged me, heh. By the end, I was sucking a heady combination of water and air--quite lovely. Good workout, I guess. I'm still amazed at how friggin' tiring swimming can be. I remember swimming for hours as a kid, but I guess it's different when you are just horsin' around vs. actually doing laps. Anyway, after a brutal workout, we jumped into bike gear. It wasn't really a workout so much as a bike clinic. Most of it was pretty remedial stuff: clipping in and stopping, turning, grabbing your bottle without looking (actually kind of hard, at least returning the bottle w/o looking is). I picked one new thing though -- countersteering into a turn. We also did this fun drill where we ride in twos, side-by-side and lean into each other, practicing riding close to others. This guy and I actually locked elbows and almost fell over at one point, but we recovered quick...
+
+After the drills, we had an honoree potluck, which consisted of sitting down, basking in the sun, munching on sammiches and listening to a few speakers. It was pretty inspiring to hear the stories of two honorees who had recovered from Hodgkin's Disease and are now in remission. Some peeps also told personal stories about family or loved ones. I expect I will probable have to say something at some point, but I'm pretty uncomfortable right now. It was actually fairly hard to listen to all of those cancer stories. Got me a little sad. But it's nice to know that I'm good company. Good company that is trying to make a difference.
+
+Swim distance: about 1200 meters**Bike Distance: maybe 4 miles (maybe)****Totals:**Swim: 3200 meters**Bike: 14 miles**Run: 10 miles
+
+Warshed up after ward and ran a few errands before heading out with roomie Bill for the evening. We hit Zeitgeist with buritos in tow and a pitcher of [Franziskaner](http://www.franziskaner.com/3_products/images/moench_ani.gif) before heading out to Berkeley to see Wilco at the Greek Theatre, meeting up with my friend Kerry and a friend of hers (Dave?). It was perfect weather for an outdoor concert and Wilco didn't disappoint. They played a real good show, including the three songs I wanted to hear (that I haven't heard them play live before): Kamera, California Stars, and Heavy Metal Drummer. Funnily enough, the songs I wanted to hear most weren't my faves of the night. I guess I like the studio versions so much that I was disappointed by their treatment live. A minor issue as the show was a really good one. I've seen them three times now and I think that's probably enough, unless their next album just blows me away...
+
+**Sunday****Was picked up by Lawrence, who's pretty sporty and we headed out to the East Bay again. This time is was a biking excursion. Instead of riding with the group, I decided to do a bit more of an agressive workout. Well, it about killed me. Lawrence has done tris before and is generally more in shape than I. It was a beautiful ride with a lot of views and a lot of hills. We started in Berkeley and climbed up into Kensington, along Bear Valley Road and down Wildcat Canyon into Orinda, stopped for a beverage and then rode out to Moraga before making the climb back up, past scenic Canyon, CA, up Pinehurst Road (really neat school there--I would have loved to gone there--nestled in the woods) and along Skyline Drive and back down to the car. As we climbed back up the hill, we encountered swarms of ladybugs--you would ride through them and find several passengers on your clothes. Sure beats swarms of locusts, heh. The hills were challenging and the views were great--really good workout!
+
+Bike: 32 miles**Total Bike: 46 miles
+
+After the grueling bike, I showered and headed over to Deborah's, and we hopped into her roomie's car and went out to East Bay (yet again--some kind of record for me). To Berkeley again to meet up with a bunch of Deborah's friends, including her friend Seldon in town from NYC. I missed hooking up with them after the Wilco show, so it was good to meet him and see some of her peeps. We went to La Mediterranee, which is generally good for food, though I would have rathered hit a restaurant that is unique/specific to Berkeley. Anyway, it was a good time with a good group of folks.

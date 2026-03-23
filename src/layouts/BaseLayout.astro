@@ -1,0 +1,99 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+  noNav?: boolean;
+}
+
+const {
+  title,
+  description = 'Dedicated Diversions — photography, writing, and random musings by xispo.',
+  ogImage,
+  noNav = false,
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate" type="application/rss+xml" title="Games as a Podcast" href="/podcast/rss.xml" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:type" content="website" />
+    {ogImage && <meta property="og:image" content={ogImage} />}
+
+    <!-- Preconnect for fonts -->
+    <link rel="preconnect" href="https://fonts.bunny.net" />
+    <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700,800&display=swap" rel="stylesheet" />
+
+    <title>{title} — xispo.co</title>
+  </head>
+  <body>
+    {!noNav && (
+      <header>
+        <nav class="nav">
+          <div class="container nav__inner">
+            <a href="/" class="nav__logo">xispo</a>
+            <button class="nav__burger" id="nav-burger" aria-label="Toggle menu" aria-expanded="false">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <line x1="2" y1="6" x2="20" y2="6" />
+                <line x1="2" y1="11" x2="20" y2="11" />
+                <line x1="2" y1="16" x2="20" y2="16" />
+              </svg>
+            </button>
+            <ul class="nav__links" id="nav-links">
+              <li><a href="/journal">Journal</a></li>
+              <li><a href="/photos">Photos</a></li>
+              <li><a href="/podcast">Podcast</a></li>
+              <li><a href="/about">About</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+    )}
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <span>&copy; {new Date().getFullYear()} xispo</span>
+        <ul class="footer__links">
+          <li><a href="https://flickr.com/photos/xispo" target="_blank" rel="noopener">Flickr</a></li>
+          <li><a href="/podcast/rss.xml">RSS</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script>
+      const burger = document.getElementById('nav-burger');
+      const links = document.getElementById('nav-links');
+      burger?.addEventListener('click', () => {
+        const isOpen = links?.classList.toggle('is-open');
+        burger.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      // Set aria-current on active nav links
+      document.querySelectorAll<HTMLAnchorElement>('.nav__links a').forEach(a => {
+        if (a.pathname !== '/' && window.location.pathname.startsWith(a.pathname)) {
+          a.setAttribute('aria-current', 'page');
+        }
+      });
+    </script>
+  </body>
+</html>

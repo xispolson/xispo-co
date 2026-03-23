@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { formatDate, isoDate, truncate } from '../../../lib/utils';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('journal', ({ data }) => !data.draft);
+  const categories = [...new Set(posts.flatMap(p => p.data.categories))];
+  return categories.map(category => ({
+    params: { category },
+    props: {
+      posts: posts
+        .filter(p => p.data.categories.includes(category))
+        .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf()),
+      category,
+    },
+  }));
+}
+
+const { posts, category } = Astro.props;
+---
+
+<BaseLayout title={`${category} — Journal`}>
+  <div class="page-top">
+    <div class="container container--narrow">
+      <div class="section__header">
+        <h1 class="section__title">{category}</h1>
+        <span class="text-muted" style="margin-left: auto; font-size: var(--size-sm);">
+          {posts.length} posts
+        </span>
+      </div>
+
+      <ul class="post-list">
+        {posts.map(post => (
+          <li class="post-list__item">
+            <time class="post-list__date" datetime={isoDate(post.data.date)}>
+              {formatDate(post.data.date)}
+            </time>
+            <div>
+              <a href={`/journal/${post.id}`} class="post-list__title">
+                {post.data.title}
+              </a>
+              {post.data.excerpt && (
+                <p class="post-list__excerpt">{truncate(post.data.excerpt, 120)}</p>
+              )}
+            </div>
+          </li>
+        ))}
+      </ul>
+
+      <div style="margin-top: 2rem;">
+        <a href="/journal" class="article-header__back">← All posts</a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

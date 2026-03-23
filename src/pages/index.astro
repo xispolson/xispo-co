@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { getRandomHeroPhoto } from '../lib/flickr';
+import { formatDate, isoDate, truncate } from '../lib/utils';
+
+const posts = (await getCollection('journal', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 8);
+
+const episodes = (await getCollection('podcast', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3);
+
+const hero = await getRandomHeroPhoto(import.meta.env.FLICKR_ALBUM_ID);
+---
+
+<BaseLayout title="xispo">
+  <!-- Hero -->
+  <section class="hero">
+    {hero ? (
+      <img
+        class="hero__img"
+        src={hero.url_l}
+        alt={hero.title || 'Hero photo'}
+        loading="eager"
+        decoding="async"
+        width={hero.width_l}
+        height={hero.height_l}
+      />
+    ) : (
+      <div class="hero__img" style="background: #1a1a1a;" />
+    )}
+    <div class="hero__overlay" />
+    <div class="hero__content container">
+      <h1 class="hero__title">Dedicated<br/>Diversions</h1>
+      <p class="hero__subtitle">Photography, writing, and random musings.</p>
+      {hero?.title && <p class="hero__meta">{hero.title}</p>}
+    </div>
+  </section>
+
+  <!-- Recent journal posts -->
+  <section class="section">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title">Journal</h2>
+        <a href="/journal" class="section__link">All posts →</a>
+      </div>
+      <ul class="post-list">
+        {posts.map(post => (
+          <li class="post-list__item">
+            <time class="post-list__date" datetime={isoDate(post.data.date)}>
+              {formatDate(post.data.date)}
+            </time>
+            <div>
+              <a href={`/journal/${post.id}`} class="post-list__title">
+                {post.data.title}
+              </a>
+              {post.data.excerpt && (
+                <p class="post-list__excerpt">{truncate(post.data.excerpt)}</p>
+              )}
+              {post.data.categories.length > 0 && (
+                <div class="post-list__tags">
+                  {post.data.categories.map(cat => (
+                    <a href={`/journal/category/${cat}`} class="tag">{cat}</a>
+                  ))}
+                </div>
+              )}
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- Latest podcast episodes -->
+  {episodes.length > 0 && (
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Podcast</h2>
+          <a href="/podcast" class="section__link">All episodes →</a>
+        </div>
+        <div class="episodes-grid">
+          {episodes.map(ep => (
+            <article class="episode-card">
+              <div class="episode-card__num">
+                {String(ep.data.episodeNumber ?? '').padStart(2, '0') || '—'}
+              </div>
+              <div>
+                <h3 class="episode-card__title">
+                  <a href={`/podcast/${ep.id}`}>{ep.data.title}</a>
+                </h3>
+                <div class="episode-card__meta">
+                  <time datetime={isoDate(ep.data.date)}>{formatDate(ep.data.date)}</time>
+                  {ep.data.duration && <span>{ep.data.duration}</span>}
+                </div>
+                <p class="episode-card__desc">{truncate(ep.data.description, 200)}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+</BaseLayout>

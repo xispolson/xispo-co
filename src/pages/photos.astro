@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getPhotos } from '../lib/flickr';
+
+const photos = await getPhotos({
+  albumId: import.meta.env.FLICKR_ALBUM_ID,
+  count: 100,
+});
+---
+
+<BaseLayout title="Photos" description="A selection of photographs by xispo.">
+  <div class="page-top">
+    <div class="container">
+      <div class="section__header">
+        <h1 class="section__title">Photos</h1>
+        {photos.length > 0 && (
+          <span class="text-muted" style="margin-left: auto; font-size: var(--size-sm);">
+            {photos.length} photos · <a href="https://flickr.com/photos/xispo" target="_blank" rel="noopener">Flickr</a>
+          </span>
+        )}
+      </div>
+
+      {photos.length === 0 ? (
+        <p class="text-muted">
+          Photos load from Flickr at build time.
+          Set <code>FLICKR_API_KEY</code> and <code>FLICKR_USER_ID</code> in your <code>.env</code> to populate this page.
+        </p>
+      ) : (
+        <div class="photo-grid">
+          {photos.map(photo => (
+            <a
+              class="photo-grid__item"
+              href={`https://www.flickr.com/photos/xispo/${photo.id}`}
+              target="_blank"
+              rel="noopener"
+              title={photo.title}
+            >
+              <img
+                src={photo.url_c}
+                alt={photo.title || ''}
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+  </div>
+</BaseLayout>
