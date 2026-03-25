@@ -588,6 +588,55 @@ audio::-webkit-media-controls-panel { background: var(--bg-raised); }
   gap: 1rem;
 }
 
+/* ─── Podcast banner (full-width promo) ─────────────────────────────────── */
+.podcast-banner {
+  position: relative;
+  height: 420px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 3rem;
+}
+
+.podcast-banner__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.podcast-banner__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(13,13,13,0.1) 0%,
+    rgba(13,13,13,0.6) 50%,
+    rgba(13,13,13,0.95) 100%
+  );
+}
+
+.podcast-banner__content {
+  position: relative;
+  width: 100%;
+  padding-bottom: 2.5rem;
+  padding-top: var(--nav-height);
+}
+
+.podcast-banner__inner {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.5rem;
+}
+
+@media (max-width: 480px) {
+  .podcast-banner { height: auto; padding-top: calc(var(--nav-height) + 1rem); }
+  .podcast-banner__img { position: absolute; height: 100%; }
+  .podcast-banner__inner { flex-direction: column; align-items: flex-start; }
+}
+
 /* ─── Podcast page hero ──────────────────────────────────────────────────── */
 .podcast-hero {
   padding-top: calc(var(--nav-height) + 4rem);
@@ -597,11 +646,11 @@ audio::-webkit-media-controls-panel { background: var(--bg-raised); }
 }
 
 .podcast-hero__artwork {
-  width: 180px;
-  height: 180px;
+  width: 120px;
+  height: 120px;
   border-radius: var(--radius-lg);
   object-fit: cover;
-  margin-bottom: 1.5rem;
+  flex-shrink: 0;
   box-shadow: 0 8px 32px rgba(0,0,0,0.5);
 }
 

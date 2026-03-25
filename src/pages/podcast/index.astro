@@ -9,34 +9,48 @@ const episodes = (await getCollection('podcast', ({ data }) => !data.draft))
 const PODCAST_NAME = 'Games as a Podcast';
 const PODCAST_DESC = 'Jabbering about games and the industry that makes them.';
 const PODCAST_ARTWORK = '/podcast/artwork.jpg';
+const PODCAST_PROMO = '/podcast/promo/GaaP_podcast_promo-FINAL.jpg';
+const SPOTIFY_URL = 'https://open.spotify.com/show/7eGC4gpJuHLphu1MP5jxgn?si=f2e31449b1be41a4';
+const APPLE_URL = 'https://podcasts.apple.com/us/podcast/games-as-a-podcast/id1816797200';
 ---
 
 <BaseLayout
   title={PODCAST_NAME}
   description={PODCAST_DESC}
 >
-  <div class="podcast-hero">
-    <div class="container">
-      <img
-        class="podcast-hero__artwork"
-        src={PODCAST_ARTWORK}
-        alt={`${PODCAST_NAME} artwork`}
-        width="180"
-        height="180"
-        onerror="this.style.display='none'"
-      />
-      <h1 class="podcast-hero__title">{PODCAST_NAME}</h1>
-      <p class="podcast-hero__desc">{PODCAST_DESC}</p>
-
-      <div class="podcast-hero__links">
-        <a href="/podcast/rss.xml" class="btn">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19.01 7.38 20 6.18 20C4.98 20 4 19.01 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"/>
-          </svg>
-          RSS Feed
-        </a>
-        <a href="https://open.spotify.com" target="_blank" rel="noopener" class="btn">Spotify</a>
-        <a href="https://podcasts.apple.com" target="_blank" rel="noopener" class="btn">Apple Podcasts</a>
+  <!-- Full-width promo banner -->
+  <div class="podcast-banner">
+    <img
+      class="podcast-banner__img"
+      src={PODCAST_PROMO}
+      alt={PODCAST_NAME}
+      loading="eager"
+    />
+    <div class="podcast-banner__overlay" />
+    <div class="podcast-banner__content container">
+      <div class="podcast-banner__inner">
+        <img
+          class="podcast-hero__artwork"
+          src={PODCAST_ARTWORK}
+          alt={`${PODCAST_NAME} artwork`}
+          width="120"
+          height="120"
+          onerror="this.style.display='none'"
+        />
+        <div>
+          <h1 class="podcast-hero__title">{PODCAST_NAME}</h1>
+          <p class="podcast-hero__desc">{PODCAST_DESC}</p>
+          <div class="podcast-hero__links">
+            <a href={SPOTIFY_URL} target="_blank" rel="noopener" class="btn btn--accent">Spotify</a>
+            <a href={APPLE_URL} target="_blank" rel="noopener" class="btn">Apple Podcasts</a>
+            <a href="/podcast/rss.xml" class="btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19.01 7.38 20 6.18 20C4.98 20 4 19.01 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"/>
+              </svg>
+              RSS
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
