@@ -19,7 +19,7 @@ export async function GET(context: APIContext) {
       <itunes:author>xispo</itunes:author>
       <itunes:category text="Games &amp; Hobbies" />
       <itunes:explicit>no</itunes:explicit>
-      <itunes:image href="${context.site}podcast-artwork.jpg" />
+      <itunes:image href="${context.site}podcast/artwork.jpg" />
       <itunes:new-feed-url>${context.site}podcast/rss.xml</itunes:new-feed-url>
     `,
     items: episodes.map(ep => ({
