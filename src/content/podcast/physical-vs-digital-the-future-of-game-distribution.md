@@ -6,6 +6,6 @@ season: 1
 audioUrl: "https://pub-8e3685a16ec94aae82a07d0f52e4c128.r2.dev/GaaPS01E04-physical-vs-digital-the-future-of-game-distribution.mp3"
 duration: ""
 description: "(This episode was recorded in late 2024)  Ethan, a passionate collector, makes the case for physical game ownership, while Chris champions the convenience of digital. Together, they explore nostalgia, preservation, and how distribution is evolving in today’s gaming landscape."
-artwork: "/podcast/artwork.jpg"
+artwork: "/podcast/promo/E04.jpg"
 draft: false
 ---

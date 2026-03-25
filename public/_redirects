@@ -6,5 +6,4 @@
 # (set this as a Cloudflare Pages redirect rule for that domain)
 # https://gamesasapodcast.com/*  https://xispo.co/podcast/:splat  301
 
-# Trailing slash normalisation
-/:path/             /:path              301
+# Note: trailing slash normalisation is handled by Cloudflare Pages natively

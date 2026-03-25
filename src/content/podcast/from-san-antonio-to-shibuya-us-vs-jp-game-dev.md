@@ -6,6 +6,6 @@ season: 1
 audioUrl: "https://pub-8e3685a16ec94aae82a07d0f52e4c128.r2.dev/GaaPS01E07-from-san-antonio-to-shibuya-us-vs-jp-game-dev.mp3"
 duration: ""
 description: "Former SEGA insider Marc Cellucci takes us behind the scenes of titles like Shenmue and Jet Set Radio. Hear stories about working with legendary developers like Nagoshi-san and the impact of Japanese culture on gaming."
-artwork: "/podcast/artwork.jpg"
+artwork: "/podcast/promo/E07.jpg"
 draft: false
 ---

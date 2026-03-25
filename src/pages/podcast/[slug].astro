@@ -22,16 +22,29 @@ const { Content } = await render(ep);
       <header class="article-header">
         <a href="/podcast" class="article-header__back">← Games as a Podcast</a>
 
-        <p class="article-header__category">
-          {ep.data.episodeNumber != null && `Episode ${ep.data.episodeNumber}`}
-          {ep.data.season != null && ` · Season ${ep.data.season}`}
-        </p>
-
-        <h1 class="article-header__title">{ep.data.title}</h1>
-
-        <div class="article-header__meta">
-          <time datetime={isoDate(ep.data.date)}>{formatDate(ep.data.date)}</time>
-          {ep.data.duration && <span>{ep.data.duration}</span>}
+        <div class="episode-detail__hero">
+          {ep.data.artwork && (
+            <img
+              class="episode-detail__img"
+              src={ep.data.artwork}
+              alt={ep.data.title}
+              width="280"
+              height="280"
+              loading="eager"
+              onerror="this.style.display='none'"
+            />
+          )}
+          <div>
+            <p class="article-header__category">
+              {ep.data.episodeNumber != null && `Episode ${ep.data.episodeNumber}`}
+              {ep.data.season != null && ` · Season ${ep.data.season}`}
+            </p>
+            <h1 class="article-header__title">{ep.data.title}</h1>
+            <div class="article-header__meta">
+              <time datetime={isoDate(ep.data.date)}>{formatDate(ep.data.date)}</time>
+              {ep.data.duration && <span>{ep.data.duration}</span>}
+            </div>
+          </div>
         </div>
       </header>
 

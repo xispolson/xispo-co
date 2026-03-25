@@ -41,6 +41,9 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700,800&display=swap" rel="stylesheet" />
 
     <title>{title} — xispo.co</title>
+
+    <!-- Plausible Analytics -->
+    <script defer data-domain="xispo.co" src="https://plausible.io/js/script.js"></script>
   </head>
   <body>
     {!noNav && (

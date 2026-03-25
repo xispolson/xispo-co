@@ -48,19 +48,29 @@ const PODCAST_ARTWORK = '/podcast/artwork.jpg';
       <div class="episodes-grid">
         {episodes.map(ep => (
           <article class="episode-card">
-            <div class="episode-card__num">
-              {ep.data.episodeNumber != null
-                ? String(ep.data.episodeNumber).padStart(2, '0')
-                : '—'}
-            </div>
+            <a href={`/podcast/${ep.id}`} class="episode-card__thumb" aria-hidden="true" tabindex="-1">
+              <img
+                src={ep.data.artwork ?? '/podcast/artwork.jpg'}
+                alt=""
+                width="96"
+                height="96"
+                loading="lazy"
+                onerror="this.src='/podcast/artwork.jpg'"
+              />
+            </a>
             <div>
-              <h2 class="episode-card__title">
-                <a href={`/podcast/${ep.id}`}>{ep.data.title}</a>
-              </h2>
-              <div class="episode-card__meta">
+              <div class="episode-card__meta" style="margin-top: 0; margin-bottom: 0.35rem;">
+                {ep.data.episodeNumber != null && (
+                  <span style="color: var(--accent); font-weight: 600;">
+                    Ep. {ep.data.episodeNumber}
+                  </span>
+                )}
                 <time datetime={isoDate(ep.data.date)}>{formatDate(ep.data.date)}</time>
                 {ep.data.duration && <span>{ep.data.duration}</span>}
               </div>
+              <h2 class="episode-card__title">
+                <a href={`/podcast/${ep.id}`}>{ep.data.title}</a>
+              </h2>
               <p class="episode-card__desc">{truncate(ep.data.description, 220)}</p>
               <div class="audio-player" style="margin-top: 0.75rem;">
                 <audio controls preload="none">

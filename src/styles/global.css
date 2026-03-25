@@ -476,9 +476,51 @@ hr {
   line-height: 1.6;
 }
 
+/* Episode card thumbnail (replaces number when artwork is present) */
+.episode-card__thumb {
+  width: 96px;
+  height: 96px;
+  flex-shrink: 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: block;
+  align-self: start;
+}
+
+.episode-card__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.2s;
+}
+
+.episode-card:hover .episode-card__thumb img { opacity: 0.85; }
+
+/* Episode detail page — promo image + metadata side by side */
+.episode-detail__hero {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.episode-detail__img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  flex-shrink: 0;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+}
+
+@media (max-width: 640px) {
+  .episode-detail__hero { flex-direction: column; }
+  .episode-detail__img { width: 100%; height: auto; max-width: 280px; }
+}
+
 @media (max-width: 480px) {
   .episode-card { grid-template-columns: 1fr; }
-  .episode-card__num { font-size: var(--size-2xl); }
+  .episode-card__thumb { width: 72px; height: 72px; }
 }
 
 /* ─── Audio player ───────────────────────────────────────────────────────── */
