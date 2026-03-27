@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig, envField } from 'astro/config';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 import keystatic from '@keystatic/astro';
@@ -15,4 +15,11 @@ export default defineConfig({
     sitemap(),
     keystatic(),
   ],
+  env: {
+    schema: {
+      FLICKR_API_KEY: envField.string({ context: 'server', access: 'secret', optional: true }),
+      FLICKR_USER_ID: envField.string({ context: 'server', access: 'secret', optional: true }),
+      FLICKR_ALBUM_ID: envField.string({ context: 'server', access: 'secret', optional: true }),
+    },
+  },
 });

@@ -1,15 +1,16 @@
 /**
  * Flickr API helpers — all called at build time (no client-side requests).
- * Set FLICKR_API_KEY and FLICKR_USER_ID in your .env file.
+ * Set FLICKR_API_KEY and FLICKR_USER_ID in Cloudflare Pages environment variables.
  *
  * FLICKR_USER_ID can be found at: https://www.flickr.com/services/api/explore/?method=flickr.people.findByUsername
  * For user "xispo" you can also use the NSID directly once fetched.
  */
 
-// Use process.env directly so Cloudflare Pages build picks these up reliably
-const API_KEY   = (import.meta.env.FLICKR_API_KEY ?? process.env.FLICKR_API_KEY ?? '') as string;
-const USER_ID   = (import.meta.env.FLICKR_USER_ID ?? process.env.FLICKR_USER_ID ?? '') as string;  // e.g. 12345678@N00
-const BASE_URL  = 'https://api.flickr.com/services/rest';
+import { FLICKR_API_KEY, FLICKR_USER_ID } from 'astro:env/server';
+
+const API_KEY  = FLICKR_API_KEY ?? '';
+const USER_ID  = FLICKR_USER_ID ?? '';
+const BASE_URL = 'https://api.flickr.com/services/rest';
 
 export interface FlickrPhoto {
   id: string;
