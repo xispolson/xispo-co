@@ -29,7 +29,13 @@ const hero = await getRandomHeroPhoto(import.meta.env.FLICKR_ALBUM_ID);
         height={hero.height_l}
       />
     ) : (
-      <div class="hero__img" style="background: #1a1a1a;" />
+      <img
+        class="hero__img"
+        src="/hero-fallback.jpg"
+        alt="xispo"
+        loading="eager"
+        decoding="async"
+      />
     )}
     <div class="hero__overlay" />
     <div class="hero__content container">
