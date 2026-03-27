@@ -6,3 +6,4 @@ dist/
 .DS_Store
 *.log
 src/data/hero.json
+src/data/photos.json

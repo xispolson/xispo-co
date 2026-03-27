@@ -28,10 +28,13 @@ const episodes = (await getCollection('podcast', ({ data }) => !data.draft))
     {hero ? (
       <img
         class="hero__img"
-        src={hero.url_l}
+        src={hero.url_c}
+        srcset={`${hero.url_m} 500w, ${hero.url_c} 800w, ${hero.url_l} 1024w`}
+        sizes="100vw"
         alt={hero.title || 'Hero photo'}
         loading="eager"
         decoding="async"
+        fetchpriority="high"
         width={hero.width_l}
         height={hero.height_l}
       />
@@ -42,6 +45,7 @@ const episodes = (await getCollection('podcast', ({ data }) => !data.draft))
         alt="xispo"
         loading="eager"
         decoding="async"
+        fetchpriority="high"
       />
     )}
     <div class="hero__overlay" />

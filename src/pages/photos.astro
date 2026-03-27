@@ -1,11 +1,15 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { getPhotos } from '../lib/flickr';
+import type { FlickrPhoto } from '../lib/flickr';
 
-const photos = await getPhotos({
-  albumId: import.meta.env.FLICKR_ALBUM_ID,
-  count: 100,
-});
+// Photos pre-fetched by scripts/fetch-hero.mjs before astro build runs.
+let photos: FlickrPhoto[] = [];
+try {
+  const mod = await import('../data/photos.json').catch(() => null);
+  photos = (mod?.default ?? []) as FlickrPhoto[];
+} catch {
+  // photos stays empty → empty state renders
+}
 ---
 
 <BaseLayout title="Photos" description="A selection of photographs by xispo.">
@@ -21,10 +25,7 @@ const photos = await getPhotos({
       </div>
 
       {photos.length === 0 ? (
-        <p class="text-muted">
-          Photos load from Flickr at build time.
-          Set <code>FLICKR_API_KEY</code> and <code>FLICKR_USER_ID</code> in your <code>.env</code> to populate this page.
-        </p>
+        <p class="text-muted">No photos available right now.</p>
       ) : (
         <div class="photo-grid">
           {photos.map(photo => (
