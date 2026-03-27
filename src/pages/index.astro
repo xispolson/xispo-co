@@ -1,8 +1,18 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
-import { getRandomHeroPhoto } from '../lib/flickr';
 import { formatDate, isoDate, truncate } from '../lib/utils';
+import type { FlickrPhoto } from '../lib/flickr';
+
+// Hero photo pre-fetched by scripts/fetch-hero.mjs before astro build runs.
+let hero: FlickrPhoto | null = null;
+try {
+  const mod = await import('../data/hero.json').catch(() => null);
+  hero = mod?.default ?? null;
+} catch {
+  // hero stays null → fallback image renders
+}
+
 const posts = (await getCollection('journal', ({ data }) => !data.draft))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, 8);
@@ -10,8 +20,6 @@ const posts = (await getCollection('journal', ({ data }) => !data.draft))
 const episodes = (await getCollection('podcast', ({ data }) => !data.draft))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, 3);
-
-const hero = await getRandomHeroPhoto(process.env.FLICKR_ALBUM_ID);
 ---
 
 <BaseLayout title="xispo">
