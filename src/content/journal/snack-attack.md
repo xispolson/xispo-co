@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BV7j1WTHFye/)
-
-Photo taken at: Bison Paddock
-
-[View in Instagram ⇒](https://www.instagram.com/p/BV7j1WTHFye/)
+![All praise Skyfish](/images/journal/201709-21296340_472638556456500_3917834824852701184_n_17883609379122762.jpg)

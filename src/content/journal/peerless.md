@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BKtStU9DR77/)
-
-Photo taken at: Fort Mason Park
-
-[View in Instagram ⇒](https://www.instagram.com/p/BKtStU9DR77/)
+![I thought that maybe things had gone far enough  with this pumpkin spice thing, but clearly not. #gmafb #deathtopumpkinspice](/images/journal/201610-14482863_171199139998485_3419227291161460736_n_17843232841137982.jpg)

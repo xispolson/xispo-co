@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BThi2w0AU37/)
-
-Photo taken at: West Oakland, Oakland, California
-
-[View in Instagram ⇒](https://www.instagram.com/p/BThi2w0AU37/)
+![Court flower 🌺 #latergram](/images/journal/201707-20347269_242239662954972_2702009650135433216_n_17890773598027790.jpg)

@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BdWJ46jgFxA/)
-
-Photo taken at: San Francisco, California
-
-[View in Instagram ⇒](https://www.instagram.com/p/BdWJ46jgFxA/)
+![Snuggling into Spring... #caturday #catsofinstagram #cats](/images/journal/201803-29401482_160458507964842_4210013384050999296_n_17908805416136025.jpg)

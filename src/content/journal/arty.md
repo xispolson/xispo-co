@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BQ9dL-XgXId/)
-
-Photo taken at: San Francisco MOMA
-
-[View in Instagram ⇒](https://www.instagram.com/p/BQ9dL-XgXId/)
+![Frog sanctuary. #sf #sanfrancisco #themission #frogs](/images/journal/201704-17881401_726888350769573_5680666454567944192_n_17864275294094661.jpg)

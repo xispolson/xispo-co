@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BN7YEiAjZ75/)
-
-Photo taken at: Lake Merced
-
-[View in Instagram ⇒](https://www.instagram.com/p/BN7YEiAjZ75/)
+![Happy Alien Day!](/images/journal/201704-18013941_1253856494669400_1352933802254532608_n_17879087533024337.jpg)

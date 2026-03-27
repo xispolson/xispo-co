@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BRmbrqjgUyl/)
-
-Photo taken at: Crissy Field
-
-[View in Instagram ⇒](https://www.instagram.com/p/BRmbrqjgUyl/)
+![Congrats to my sis, @erika4974 - she earned her Doctorate in Nursing today. You are an amazing and inspiring person and I love you so much! #doctorsister](/images/journal/201705-18513542_534840076865735_5218922784092061696_n_17868488653127818.jpg)

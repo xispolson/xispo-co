@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BRQtayoA5q0/)
-
-Photo taken at: J. Rochioli Winery
-
-[View in Instagram ⇒](https://www.instagram.com/p/BRQtayoA5q0/)
+![Randomness from Mish 😂😍](/images/journal/201705-18382429_259207571211621_4241389885379837952_n_17868899854096965.jpg)

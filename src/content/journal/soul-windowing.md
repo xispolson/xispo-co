@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BQ9keAbgh_p/)
-
-Photo taken at: San Francisco MOMA
-
-[View in Instagram ⇒](https://www.instagram.com/p/BQ9keAbgh_p/)
+![Making it work... #caturday #catsofinstagram #cats](/images/journal/201704-17883154_429182777441616_3706511473132961792_n_17877226873016390.jpg)

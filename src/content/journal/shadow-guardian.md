@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BfLv4yxguLz/)
-
-Photo taken at: Marshall's Beach
-
-[View in Instagram ⇒](https://www.instagram.com/p/BfLv4yxguLz/)
+![Saw several of these awesome-looking critters on Saturday. #caterpillar](/images/journal/201805-31489125_212517686015893_8614617631611158528_n_17845933054264913.jpg)

@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BMCTabUDQ9Z/)
-
-Photo taken at: Fort Mason Center for Arts & Culture
-
-[View in Instagram ⇒](https://www.instagram.com/p/BMCTabUDQ9Z/)
+![Prairie livin'](/images/journal/201701-16110594_1825500134357810_4632350703816278016_n_17870723164012061.jpg)

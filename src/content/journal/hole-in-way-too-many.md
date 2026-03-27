@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BJRoPyLjq9Z/)
-
-Photo taken at: Pier 70, San Francisco
-
-[View in Instagram ⇒](https://www.instagram.com/p/BJRoPyLjq9Z/)
+![Eyes in the sky](/images/journal/201609-14276427_1641860782811230_20976211_n_17842236514168418.jpg)

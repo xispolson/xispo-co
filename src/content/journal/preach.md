@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BPjSFHpjspE/)
-
-Photo taken at: Civic Center Plaza, San Francisco, CA
-
-[View in Instagram ⇒](https://www.instagram.com/p/BPjSFHpjspE/)
+![Healdsburg retreat. #moniclairevineyards #winecountry](/images/journal/201703-17439040_668933183278667_7497899733487190016_n_17875004839063474.jpg)

@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BLCbzXADMtf/)
-
-Photo taken at: San Francisco, California
-
-[View in Instagram ⇒](https://www.instagram.com/p/BLCbzXADMtf/)
+![Jockeying for fire position... #catsofinstagram #cats #caturday](/images/journal/201701-15876744_1181153128669107_3582312288926826496_n_17870262892049884.jpg)

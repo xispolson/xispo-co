@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BaO0sa0H95y/)
-
-Photo taken at: San Francisco, California
-
-[View in Instagram ⇒](https://www.instagram.com/p/BaO0sa0H95y/)
+![Gang wade](/images/journal/201801-26072818_324614494702968_8382931741156835328_n_17859077173212225.jpg)

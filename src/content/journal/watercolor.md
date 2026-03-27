@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BL197bRDci_/)
-
-Photo taken at: California Academy of Sciences
-
-[View in Instagram ⇒](https://www.instagram.com/p/BL197bRDci_/)
+![Jockeying for fire position... #catsofinstagram #cats #caturday](/images/journal/201701-15876744_1181153128669107_3582312288926826496_n_17870262892049884.jpg)

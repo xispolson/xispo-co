@@ -7,8 +7,4 @@ tags: ["cats", "catsofinstagram", "instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BlgAzsYlvrO/)
-
-Photo taken at: San Francisco, California
-
-[View in Instagram ⇒](https://www.instagram.com/p/BlgAzsYlvrO/)
+![Unexpected animal sighting on our hike yesterday! 😉](/images/journal/201907-66443744_468575773941194_1534363275843947146_n_17911216180322371.jpg)

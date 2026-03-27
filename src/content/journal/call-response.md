@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BY1tQUTnCP6/)
-
-Photo taken at: San Bruno, California
-
-[View in Instagram ⇒](https://www.instagram.com/p/BY1tQUTnCP6/)
+![](/images/journal/201712-25011182_1895378124110589_1835541027990011904_n_17897731036127749.jpg)

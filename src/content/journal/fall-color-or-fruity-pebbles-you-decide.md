@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BN02tl0jzNx/)
-
-Photo taken at: Scenic Brush Creek, Santa Rosa, California
-
-[View in Instagram ⇒](https://www.instagram.com/p/BN02tl0jzNx/)
+![Breakfast! #catsofinstagram #cats #catswiththeirtonguesout #capturedbylight](/images/journal/201710-22500558_402921920126979_6231556758297378816_n_17877479107184861.jpg)

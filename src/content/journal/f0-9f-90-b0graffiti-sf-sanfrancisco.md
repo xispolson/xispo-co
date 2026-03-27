@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BS4GLMzA3R8/)
-
-Photo taken at: Mission District, San Francisco
-
-[View in Instagram ⇒](https://www.instagram.com/p/BS4GLMzA3R8/)
+![Love this lil' critter... #caturday #catsofinstagram #cat](/images/journal/201707-19534950_470932916614552_9101044105474998272_n_17879251132079051.jpg)

@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BSruwKWgVJX/)
-
-Photo taken at: Santa Rosa, California
-
-[View in Instagram ⇒](https://www.instagram.com/p/BSruwKWgVJX/)
+![Warning](/images/journal/201708-20590343_714594555396200_6946996566330703872_n_17866038022174041.jpg)

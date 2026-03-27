@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BNc0AOKjxla/)
-
-Photo taken at: Santa Rosa, California
-
-[View in Instagram ⇒](https://www.instagram.com/p/BNc0AOKjxla/)
+![One might think I interrupted something. Also, they look like some sorta 2 headed cat thing. 😜#catsofinstagram #cats #cute](/images/journal/201702-16230682_147572639087540_7354790577075912704_n_17848860346174795.jpg)

@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BPtUs-mj5X5/)
-
-Photo taken at: San Francisco, California
-
-[View in Instagram ⇒](https://www.instagram.com/p/BPtUs-mj5X5/)
+![This handsome fella is 19 years old! He and another four (or more?!) cats welcome visitors as they arrive. #catsofinstagram #cats #moniclairevineyards](/images/journal/201703-17438655_1292289087525689_4669328010002825216_n_17863646245121201.jpg)

@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BPfzpedjzU8/)
-
-Photo taken at: Fort Baker
-
-[View in Instagram ⇒](https://www.instagram.com/p/BPfzpedjzU8/)
+![The hills have eye.](/images/journal/201703-17494015_1831481626865863_660948230804078592_n_17862670096092477.jpg)

@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BQ9eyl7A0-_/)
-
-Photo taken at: San Francisco, California
-
-[View in Instagram ⇒](https://www.instagram.com/p/BQ9eyl7A0-_/)
+![No longer the tallest kid in class, but you are still cool in my book. #sanfrancisco #transamericapyramid](/images/journal/201705-18251578_659299987589079_7640770892875694080_n_17865891268085813.jpg)

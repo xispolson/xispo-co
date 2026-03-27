@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BKrTaOfjBCp/)
-
-Photo taken at: San Francisco, California
-
-[View in Instagram ⇒](https://www.instagram.com/p/BKrTaOfjBCp/)
+![Watercolor](/images/journal/201610-14624425_263052820763357_8515151081003548672_n_17854345300114338.jpg)

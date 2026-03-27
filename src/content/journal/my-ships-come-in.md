@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BLRp7aHjqMt/)
-
-Photo taken at: Golden Gate Bridge
-
-[View in Instagram ⇒](https://www.instagram.com/p/BLRp7aHjqMt/)
+![Hope your day is as chill(ing) as you want it to be - Happy Halloween 👻 🎃#Halloween #skeleton #boo](/images/journal/201610-14718011_548252915370561_93687526081953792_n_17843831896178873.jpg)

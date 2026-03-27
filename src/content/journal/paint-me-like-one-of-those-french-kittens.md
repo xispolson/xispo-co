@@ -7,8 +7,4 @@ tags: ["art", "cat", "catoftheday", "catsofinstagram", "instagram", "photos", "s
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BIbIIfXDaq4/)
-
-Photo taken at: San Francisco, California
-
-[View in Instagram ⇒](https://www.instagram.com/p/BIbIIfXDaq4/)
+![Totally not breaking up with this one... ❤️❤️](/images/journal/201608-13767572_1262667717101327_1880404756_n_17850284281089725.jpg)

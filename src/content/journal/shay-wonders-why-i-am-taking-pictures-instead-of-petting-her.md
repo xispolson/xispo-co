@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BR9rxqZgu-O/)
-
-Photo taken at: Kokomo Winery
-
-[View in Instagram ⇒](https://www.instagram.com/p/BR9rxqZgu-O/)
+![Breaking the fast](/images/journal/201706-18950288_115842469009842_3389963033273958400_n_17871286555107632.jpg)

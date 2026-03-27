@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BPv01gwDzAZ/)
-
-Photo taken at: San Francisco, California
-
-[View in Instagram ⇒](https://www.instagram.com/p/BPv01gwDzAZ/)
+![The clouds are on point. #kokomowinery](/images/journal/201703-17438461_1311428402282024_752549102859845632_n_17852932432145257.jpg)

@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BSysGIcAWpO/)
-
-Photo taken at: Mission District, San Francisco
-
-[View in Instagram ⇒](https://www.instagram.com/p/BSysGIcAWpO/)
+![Stay thirsty, my friends. #worldsmostinterestingcat #cat #cats #catsofinstagram](/images/journal/201706-19533605_1477068712351651_7194211164446785536_n_17861695588149963.jpg)

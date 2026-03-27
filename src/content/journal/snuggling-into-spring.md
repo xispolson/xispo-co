@@ -7,8 +7,4 @@ tags: ["cats", "catsofinstagram", "caturday", "instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BguOYpUg-2A/)
-
-Photo taken at: San Francisco, California
-
-[View in Instagram ⇒](https://www.instagram.com/p/BguOYpUg-2A/)
+![Happy Birthday, ya big lug! @bill.ramsey 😘](/images/journal/201903-53501895_452385978639247_9048293817074059599_n_18017354155179545.jpg)

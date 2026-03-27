@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BZWsXLKH_dc/)
-
-Photo taken at: SFMOMA San Francisco Museum of Modern Art
-
-[View in Instagram ⇒](https://www.instagram.com/p/BZWsXLKH_dc/)
+![Hope Buddy brought you all you wanted-Merry Christmas!](/images/journal/201712-25017018_724908001038917_5103322562499182592_n_17884778671171935.jpg)

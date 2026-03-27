@@ -7,8 +7,6 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/Bci2znrHZgd/)
+![Lovely riding today...](/images/journal/201812-46975572_1994720787495216_4267074746441487327_n_18002963857073987.jpg)
 
-Photo taken at: San Francisco, California
-
-[View in Instagram ⇒](https://www.instagram.com/p/Bci2znrHZgd/)
+![Lovely riding today...](/images/journal/201812-46411706_2024801457817243_57078976207991369_n_17967396442198579.jpg)

@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BOqz3vch4B5/)
-
-Photo taken at: Westside Road Wine Trail
-
-[View in Instagram ⇒](https://www.instagram.com/p/BOqz3vch4B5/)
+![Perhaps not the best choice in traveling bag... 🤣](/images/journal/201706-19623033_1904951623125721_2946879642784497664_n_17889784651037860.jpg)

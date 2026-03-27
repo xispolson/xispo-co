@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BahjNngHqFS/)
-
-Photo taken at: Saintsbury Winery
-
-[View in Instagram ⇒](https://www.instagram.com/p/BahjNngHqFS/)
+![Pretty much nailed it.](/images/journal/201809-41283669_1887468001368755_7619498518982250707_n_17942253355197156.jpg)

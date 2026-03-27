@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BYEMBjanDEs/)
-
-Photo taken at: Madras Oregon Solar Eclipse
-
-[View in Instagram ⇒](https://www.instagram.com/p/BYEMBjanDEs/)
+![Bike views didn't suck today...](/images/journal/201711-23164491_156556291617050_6906452057876594688_n_17907056413020855.jpg)

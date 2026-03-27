@@ -7,8 +7,10 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BROFnkvAG0x/)
+![100 miles in the bag. Glorious weather, good times. #santarosacentury](/images/journal/201705-18380701_1944808015754897_7912553257975676928_n_17867508211125761.jpg)
 
-Photo taken at: Mission District, San Francisco
+![100 miles in the bag. Glorious weather, good times. #santarosacentury](/images/journal/201705-18380373_554766298026919_5038510732908429312_n_17879566294004637.jpg)
 
-[View in Instagram ⇒](https://www.instagram.com/p/BROFnkvAG0x/)
+![100 miles in the bag. Glorious weather, good times. #santarosacentury](/images/journal/201705-18380992_221306241697968_486280526580154368_n_17873678953067921.jpg)
+
+![100 miles in the bag. Glorious weather, good times. #santarosacentury](/images/journal/201705-18299108_825834070903849_5133026148296425472_n_17856608179149644.jpg)

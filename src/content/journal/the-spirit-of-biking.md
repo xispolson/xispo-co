@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BfFRrpFgAQf/)
-
-Photo taken at: St Clair Brown Winery & Brewery
-
-[View in Instagram ⇒](https://www.instagram.com/p/BfFRrpFgAQf/)
+![Female merge. #cats #catsofinstagram](/images/journal/201805-31557085_173972146523986_4803283186652020736_n_17852183845262381.jpg)

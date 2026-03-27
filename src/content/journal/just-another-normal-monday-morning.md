@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BMhT8UIDQiN/)
-
-Photo taken at: Lands End
-
-[View in Instagram ⇒](https://www.instagram.com/p/BMhT8UIDQiN/)
+![Insane turnout. Hope this will snowball into positive change and a return to rationality. #womensmarch](/images/journal/201701-14574100_216010405471935_5908442546098405376_n_17870599480016584.jpg)

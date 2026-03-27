@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BYlVAYUHuRN/)
-
-Photo taken at: Scenic Brush Creek, Santa Rosa, California
-
-[View in Instagram ⇒](https://www.instagram.com/p/BYlVAYUHuRN/)
+![You so pretty, SR...](/images/journal/201712-24178224_2020242778250235_7680453100745785344_n_17883737986166845.jpg)

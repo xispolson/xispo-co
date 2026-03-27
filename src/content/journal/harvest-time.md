@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BL45QGyjUfU/)
-
-Photo taken at: Chateau Montelena Winery
-
-[View in Instagram ⇒](https://www.instagram.com/p/BL45QGyjUfU/)
+![Waffles ftw. #waffles #sf](/images/journal/201701-15875772_1433471559998847_6456948369884446720_n_17847153916166430.jpg)

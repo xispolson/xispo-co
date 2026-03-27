@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BN2iPLuD4P4/)
-
-Photo taken at: Tartine Manufactory
-
-[View in Instagram ⇒](https://www.instagram.com/p/BN2iPLuD4P4/)
+![💘Happy Valentine's Day! 💘#cats #catsofinstagram #valentines #cute](/images/journal/201702-16465462_1165281666924341_4915707898404798464_n_17851328524134514.jpg)

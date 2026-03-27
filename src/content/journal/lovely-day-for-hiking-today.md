@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BP4IwFTDOaW/)
-
-Photo taken at: Mount Tamalpais State Park
-
-[View in Instagram ⇒](https://www.instagram.com/p/BP4IwFTDOaW/)
+![Preach.](/images/journal/201703-17662447_250040602125466_8174571186726895616_n_17875625518011179.jpg)

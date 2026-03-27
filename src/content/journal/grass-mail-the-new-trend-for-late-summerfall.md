@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BIQ13rKjzxv/)
-
-Photo taken at: Santa Rosa, California
-
-[View in Instagram ⇒](https://www.instagram.com/p/BIQ13rKjzxv/)
+![Twinsies](/images/journal/201609-14033578_1699716310354415_1062457553_n_17861429293037711.jpg)

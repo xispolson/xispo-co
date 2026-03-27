@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BRQtqTOAMgo/)
-
-Photo taken at: Rochioli
-
-[View in Instagram ⇒](https://www.instagram.com/p/BRQtqTOAMgo/)
+![Curl up with someone you love ❤️ #caturday #cats #catsofinstagram](/images/journal/201705-18444424_1974952692788571_3591419715538386944_n_17880311125034809.jpg)

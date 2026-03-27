@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BopwWFHFUbL/)
-
-Photo taken at: San Francisco, California
-
-[View in Instagram ⇒](https://www.instagram.com/p/BopwWFHFUbL/)
+![Good boy.](/images/journal/201909-71548122_2758612237484887_4635543477644200963_n_17997226384268917.jpg)

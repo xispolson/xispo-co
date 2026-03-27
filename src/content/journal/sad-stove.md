@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BIiE0rPDxDi/)
-
-Photo taken at: San Francisco, California
-
-[View in Instagram ⇒](https://www.instagram.com/p/BIiE0rPDxDi/)
+![Went to Tiburon to get some sun, but didn't get any until I was back over the bridge. Made a new friend though! #maybethecoyoteateyourbaby #theironingisdelicious #sf](/images/journal/201608-14156204_1747227285518111_2010937233_n_17861819386032314.jpg)

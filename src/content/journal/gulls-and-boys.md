@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/Bd6g5aTgJaC/)
-
-Photo taken at: Stinson Beach, California
-
-[View in Instagram ⇒](https://www.instagram.com/p/Bd6g5aTgJaC/)
+![Family portrait](/images/journal/201803-29417120_2047902158757721_1185901557745451008_n_17915380936090901.jpg)

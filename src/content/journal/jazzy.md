@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BSXGIVeAEd4/)
-
-Photo taken at: Project Artaud
-
-[View in Instagram ⇒](https://www.instagram.com/p/BSXGIVeAEd4/)
+![🌞💨 🐈💨 #sunchasing #catsofinstagram #cats #caturday](/images/journal/201706-19228549_1218584411587047_466386736281288704_n_17883864268027074.jpg)

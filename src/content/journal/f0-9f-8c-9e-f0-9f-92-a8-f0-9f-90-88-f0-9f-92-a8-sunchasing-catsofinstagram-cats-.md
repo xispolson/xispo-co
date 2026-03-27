@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BVdPitpHoVp/)
-
-Photo taken at: Mission District, San Francisco
-
-[View in Instagram ⇒](https://www.instagram.com/p/BVdPitpHoVp/)
+![#itshot #facemelting](/images/journal/201709-21224229_1924398367821018_5651209013346435072_n_17881383970080498.jpg)

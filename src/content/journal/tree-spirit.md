@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BP4IkZoj4D_/)
-
-Photo taken at: Cataract Falls
-
-[View in Instagram ⇒](https://www.instagram.com/p/BP4IkZoj4D_/)
+![Two rocks with a view.](/images/journal/201703-17587104_1940518069510917_5730765272390828032_n_17875624066029570.jpg)

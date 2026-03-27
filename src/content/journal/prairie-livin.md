@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BPc-ygMhE09/)
-
-Photo taken at: Cavallo Point
-
-[View in Instagram ⇒](https://www.instagram.com/p/BPc-ygMhE09/)
+![Pigeon convention #sanfrancisco #sfbay #birds #overhead](/images/journal/201703-17268082_158109638042618_2743701773851033600_n_17863276627120184.jpg)

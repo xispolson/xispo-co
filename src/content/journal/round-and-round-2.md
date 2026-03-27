@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BZXSIdVn1Kl/)
-
-Photo taken at: San Francisco MOMA
-
-[View in Instagram ⇒](https://www.instagram.com/p/BZXSIdVn1Kl/)
+![May your New Year be solid and chill. #happynewyear #2018willbebetter](/images/journal/201712-26158473_181804175741937_8344035465057271808_n_17892025945136613.jpg)

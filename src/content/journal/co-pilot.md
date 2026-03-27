@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BIYBiYBDcrG/)
-
-Photo taken at: San Francisco, California
-
-[View in Instagram ⇒](https://www.instagram.com/p/BIYBiYBDcrG/)
+![The green abyss](/images/journal/201608-14099358_321993378143477_43355973_n_17864593051019903.jpg)

@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BNh-H7hDNxY/)
-
-Photo taken at: Healdsburg, California
-
-[View in Instagram ⇒](https://www.instagram.com/p/BNh-H7hDNxY/)
+![Palm Tuesday](/images/journal/201604-12530658_999028130183634_1560248994_n_17856105367033844.jpg)

@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BYCQ8PengOV/)
-
-Photo taken at: Erickson Aircraft Collection
-
-[View in Instagram ⇒](https://www.instagram.com/p/BYCQ8PengOV/)
+![Business Cat heads to the office. #happyhalloween #cat #catsofinstagram](/images/journal/201710-23101385_128781841159770_3792729303762862080_n_17881869742130831.jpg)

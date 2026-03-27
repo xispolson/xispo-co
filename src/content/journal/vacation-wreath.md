@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BN5BiDQjDa6/)
-
-Photo taken at: Overlook Of Golden Gate Bridge
-
-[View in Instagram ⇒](https://www.instagram.com/p/BN5BiDQjDa6/)
+![Beasley is a professional sun chaser. #caturday #catsofinstagram #cats #sunbather](/images/journal/201704-18095057_1395311087198523_6166272774361841664_n_17855471746149985.jpg)

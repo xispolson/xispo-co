@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BJG8Cz4jWh7/)
-
-Photo taken at: San Francisco, California
-
-[View in Instagram ⇒](https://www.instagram.com/p/BJG8Cz4jWh7/)
+![Soon to be urban blight. #pier70 #sf](/images/journal/201608-13687249_187047605042528_1423367896_n_17861845009052302.jpg)

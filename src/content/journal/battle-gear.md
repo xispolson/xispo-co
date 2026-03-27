@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BN5mEEGDMli/)
-
-Photo taken at: San Francisco, California
-
-[View in Instagram ⇒](https://www.instagram.com/p/BN5mEEGDMli/)
+![Love this critter. #catsofinstagram #cat #spookythecat](/images/journal/201702-16789039_714526358724565_6391185415491026944_n_17860571596089144.jpg)

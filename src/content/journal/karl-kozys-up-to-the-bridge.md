@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/Bawo2RPH7av/)
-
-Photo taken at: Fort Miley Military Reservation
-
-[View in Instagram ⇒](https://www.instagram.com/p/Bawo2RPH7av/)
+![Spa day for Spooky. #caturday #catsofinstagram #cat #cats_of_instagram #thedailykitten](/images/journal/201802-26870652_1806735196026299_7967199015940915200_n_17897052238189151.jpg)

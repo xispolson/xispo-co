@@ -7,6 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BZXuN2dHUIs/)
-
-[View in Instagram ⇒](https://www.instagram.com/p/BZXuN2dHUIs/)
+![A bit late getting to our New Year tradition of reviewing awesome things we did the past year. Lots of time @ the Alamo movies!](/images/journal/201801-26350194_207197276494100_9129606969433260032_n_17918030146054612.jpg)

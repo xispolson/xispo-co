@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BR8y0flgFt_/)
-
-Photo taken at: Hawk Hill
-
-[View in Instagram ⇒](https://www.instagram.com/p/BR8y0flgFt_/)
+![Breaking the fast](/images/journal/201706-18950288_115842469009842_3389963033273958400_n_17871286555107632.jpg)

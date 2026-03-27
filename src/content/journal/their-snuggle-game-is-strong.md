@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BP_S_ezjAXz/)
-
-Photo taken at: Mission District, San Francisco
-
-[View in Instagram ⇒](https://www.instagram.com/p/BP_S_ezjAXz/)
+![Jazzy](/images/journal/201704-17662826_777722459048909_6528904430895497216_n_17876993641016318.jpg)

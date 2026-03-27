@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BNAMIoUDaml/)
-
-Photo taken at: Mission District, San Francisco
-
-[View in Instagram ⇒](https://www.instagram.com/p/BNAMIoUDaml/)
+![Their snuggle game is strong 💪 #cats #catsofinstagram #cute #cuteattack](/images/journal/201702-16465412_563080797224367_6875024025530138624_n_17860067050114606.jpg)

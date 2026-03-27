@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BZHmlBgHVHS/)
-
-Photo taken at: Precita Park Playground
-
-[View in Instagram ⇒](https://www.instagram.com/p/BZHmlBgHVHS/)
+![](/images/journal/201712-25011182_1895378124110589_1835541027990011904_n_17897731036127749.jpg)

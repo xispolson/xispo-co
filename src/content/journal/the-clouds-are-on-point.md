@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BR_iOgIgMWX/)
-
-Photo taken at: Kokomo Winery
-
-[View in Instagram ⇒](https://www.instagram.com/p/BR_iOgIgMWX/)
+![Predator viewing party @drafthousesf! #gettothechopper](/images/journal/201706-19051455_309876346090749_8997415658543120384_n_17874711136074669.jpg)

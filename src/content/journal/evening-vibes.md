@@ -7,8 +7,4 @@ tags: ["evening", "instagram", "photos", "santa rosa"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/Bx8vREvhdf4/)
-
-Photo taken at: Santa Rosa, California
-
-[View in Instagram ⇒](https://www.instagram.com/p/Bx8vREvhdf4/)
+![Evening vibes](/images/journal/201905-60284976_116996116188479_1969108693153290761_n_18042986470094265.jpg)

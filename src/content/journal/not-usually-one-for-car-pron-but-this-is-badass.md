@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BX-2FgRHZsq/)
-
-Photo taken at: City of Mount Shasta California
-
-[View in Instagram ⇒](https://www.instagram.com/p/BX-2FgRHZsq/)
+![Come on down, the wine is fine!](/images/journal/201710-22636802_2431458313660111_782445373774888960_n_17877656740179322.jpg)

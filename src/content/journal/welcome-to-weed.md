@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BX-2gHNHX6U/)
-
-Photo taken at: The Town Of Weed
-
-[View in Instagram ⇒](https://www.instagram.com/p/BX-2gHNHX6U/)
+![Breakfast! #catsofinstagram #cats #catswiththeirtonguesout #capturedbylight](/images/journal/201710-22500558_402921920126979_6231556758297378816_n_17877479107184861.jpg)

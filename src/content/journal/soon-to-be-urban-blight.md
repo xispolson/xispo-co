@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BJRotVRDAs0/)
-
-Photo taken at: Pier 70, San Francisco
-
-[View in Instagram ⇒](https://www.instagram.com/p/BJRotVRDAs0/)
+![Grayscale](/images/journal/201609-14374060_1687654404889165_4992952563100811264_n_17852599240122876.jpg)

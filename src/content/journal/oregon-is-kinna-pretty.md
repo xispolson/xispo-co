@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BYH01AIn80J/)
-
-Photo taken at: Madras, Oregon
-
-[View in Instagram ⇒](https://www.instagram.com/p/BYH01AIn80J/)
+![O-town.](/images/journal/201711-23507168_2021692438084657_6324969178839121920_n_17901064963068937.jpg)

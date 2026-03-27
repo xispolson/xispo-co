@@ -7,8 +7,12 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BO5kTeNjlfB/)
+![Soul windowing.](/images/journal/201702-16908907_1236923836421895_8277379771646607360_n_17873814058042025.jpg)
 
-Photo taken at: San Francisco, California
+![Soul windowing.](/images/journal/201702-16906673_1830539173862441_6515382645487042560_n_17867570017066152.jpg)
 
-[View in Instagram ⇒](https://www.instagram.com/p/BO5kTeNjlfB/)
+![Soul windowing.](/images/journal/201702-16908350_1211966488919878_7948292655803269120_n_17862607651102036.jpg)
+
+![Soul windowing.](/images/journal/201702-16789173_688588437979256_7687778914793422848_n_17874180988045097.jpg)
+
+![Soul windowing.](/images/journal/201702-16908191_393901040971426_3795993637821612032_n_17876709094033403.jpg)

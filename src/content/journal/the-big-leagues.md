@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BPBQawNB6uf/)
-
-Photo taken at: Kern Center - MSOE
-
-[View in Instagram ⇒](https://www.instagram.com/p/BPBQawNB6uf/)
+![Two bridge view](/images/journal/201703-16908088_378867102498381_3495725125469208576_n_17863035517111629.jpg)

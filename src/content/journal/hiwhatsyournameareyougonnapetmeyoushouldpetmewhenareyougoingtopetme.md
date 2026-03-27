@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BSAdwryAQLh/)
-
-Photo taken at: Venge Winery
-
-[View in Instagram ⇒](https://www.instagram.com/p/BSAdwryAQLh/)
+![🌞💨 🐈💨 #sunchasing #catsofinstagram #cats #caturday](/images/journal/201706-19228549_1218584411587047_466386736281288704_n_17883864268027074.jpg)

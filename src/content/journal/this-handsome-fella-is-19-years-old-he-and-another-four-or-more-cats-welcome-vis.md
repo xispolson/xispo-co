@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BR9VaitA42I/)
-
-Photo taken at: MoniClaire Vineyards
-
-[View in Instagram ⇒](https://www.instagram.com/p/BR9VaitA42I/)
+![Breaking the fast](/images/journal/201706-18950288_115842469009842_3389963033273958400_n_17871286555107632.jpg)

@@ -7,8 +7,4 @@ tags: ["instagram", "photos"]
 draft: false
 ---
 
-[_](https://www.instagram.com/p/BMxlUd0DV42/)
-
-Photo taken at: Alameda Navy Base
-
-[View in Instagram ⇒](https://www.instagram.com/p/BMxlUd0DV42/)
+![Someone is not supposed to be on the bookcase. That same someone doesn't care. 😂#spookycat #cat #catsofinstagram](/images/journal/201701-16124373_408629759479958_7640775703239065600_n_17870464765016353.jpg)
