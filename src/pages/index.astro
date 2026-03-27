@@ -3,8 +3,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import { getRandomHeroPhoto } from '../lib/flickr';
 import { formatDate, isoDate, truncate } from '../lib/utils';
-import { FLICKR_ALBUM_ID } from 'astro:env/server';
-
 const posts = (await getCollection('journal', ({ data }) => !data.draft))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, 8);
@@ -13,7 +11,7 @@ const episodes = (await getCollection('podcast', ({ data }) => !data.draft))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, 3);
 
-const hero = await getRandomHeroPhoto(FLICKR_ALBUM_ID);
+const hero = await getRandomHeroPhoto(process.env.FLICKR_ALBUM_ID);
 ---
 
 <BaseLayout title="xispo">

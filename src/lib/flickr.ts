@@ -6,11 +6,13 @@
  * For user "xispo" you can also use the NSID directly once fetched.
  */
 
-import { FLICKR_API_KEY, FLICKR_USER_ID } from 'astro:env/server';
-
-const API_KEY  = FLICKR_API_KEY ?? '';
-const USER_ID  = FLICKR_USER_ID ?? '';
+// Read directly from process.env so this works at Astro prerender time
+const API_KEY  = process.env.FLICKR_API_KEY ?? '';
+const USER_ID  = process.env.FLICKR_USER_ID ?? '';
 const BASE_URL = 'https://api.flickr.com/services/rest';
+
+// Diagnostic — will show up in build log
+console.log('[flickr] init — API_KEY:', API_KEY ? `present (${API_KEY.length} chars)` : 'MISSING', '| USER_ID:', USER_ID ? 'present' : 'MISSING');
 
 export interface FlickrPhoto {
   id: string;
@@ -53,6 +55,9 @@ export async function getPhotos(options: {
   page?: number;
 }): Promise<FlickrPhoto[]> {
   const { albumId, count = 50, page = 1 } = options;
+
+  // Diagnostic: always logs so we can verify env vars in build log
+  console.log('[flickr] getPhotos — API_KEY:', process.env.FLICKR_API_KEY ? `set (${process.env.FLICKR_API_KEY.length} chars)` : 'MISSING', '| USER_ID:', process.env.FLICKR_USER_ID ? 'set' : 'MISSING');
 
   if (!API_KEY || !USER_ID) return [];
 
