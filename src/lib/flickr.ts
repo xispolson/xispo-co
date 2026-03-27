@@ -6,8 +6,9 @@
  * For user "xispo" you can also use the NSID directly once fetched.
  */
 
-const API_KEY   = import.meta.env.FLICKR_API_KEY ?? '';
-const USER_ID   = import.meta.env.FLICKR_USER_ID ?? '';  // e.g. 12345678@N00
+// Use process.env directly so Cloudflare Pages build picks these up reliably
+const API_KEY   = (import.meta.env.FLICKR_API_KEY ?? process.env.FLICKR_API_KEY ?? '') as string;
+const USER_ID   = (import.meta.env.FLICKR_USER_ID ?? process.env.FLICKR_USER_ID ?? '') as string;  // e.g. 12345678@N00
 const BASE_URL  = 'https://api.flickr.com/services/rest';
 
 export interface FlickrPhoto {
@@ -30,6 +31,7 @@ async function fetchFlickr(method: string, params: Record<string, string> = {}):
     console.warn('[flickr] FLICKR_API_KEY not set — skipping Flickr fetch');
     return null;
   }
+  console.log(`[flickr] Fetching: ${method}`);
 
   const url = new URL(BASE_URL);
   url.searchParams.set('method', method);
