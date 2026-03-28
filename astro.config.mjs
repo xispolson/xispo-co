@@ -8,7 +8,7 @@ import cloudflare from '@astrojs/cloudflare';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://xispo.co',
-  output: 'static',
+  output: 'hybrid',
   adapter: cloudflare(),
   integrations: [
     react(),
