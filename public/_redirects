@@ -3,7 +3,7 @@
 /category/:slug     /journal/category/:slug  301
 
 # gamesasapodcast.com domain-level redirect
-# Requires gamesasapodcast.com to be added as a custom domain on this Pages project
-https://gamesasapodcast.com/* https://xispo.co/podcast/:splat 301
+# Cannot be done here — Workers _redirects only allows relative URLs.
+# Set this up as a Cloudflare Bulk Redirect instead (Account > Bulk Redirects in dashboard).
 
 # Note: trailing slash normalisation is handled by Cloudflare Pages natively
