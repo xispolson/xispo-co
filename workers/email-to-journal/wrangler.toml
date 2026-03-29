@@ -1,0 +1,19 @@
+name = "email-to-journal"
+main = "src/index.js"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+# R2 bucket binding — must match a bucket you've created in Cloudflare
+[[r2_buckets]]
+binding = "R2_BUCKET"
+bucket_name = "xispo-journal-images"
+
+# Plain config vars (non-secret)
+[vars]
+GITHUB_REPO   = "xispolson/xispo-co"
+GITHUB_BRANCH = "main"
+# R2_PUBLIC_URL = "https://pub-XXXX.r2.dev"  # set after creating the bucket
+# ALLOWED_SENDER = "you@youremail.com"        # set in dashboard as a plain var
+
+# Secrets — set these via: wrangler secret put GITHUB_TOKEN
+# GITHUB_TOKEN  (PAT with Contents: read+write on the repo)

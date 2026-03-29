@@ -8,7 +8,7 @@ const episodes = (await getCollection('podcast', ({ data }) => !data.draft))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
 const PODCAST_NAME = 'Games as a Podcast';
-const PODCAST_DESC = 'Jabbering about games and the industry that makes them.';
+const PODCAST_DESC = 'Ethan and Chris jabbering about games and the industry that makes them.';
 const PODCAST_ARTWORK = '/podcast/artwork.jpg';
 const PODCAST_PROMO = '/podcast/promo/GaaP_podcast_promo-FINAL.jpg';
 const SPOTIFY_URL = 'https://open.spotify.com/show/7eGC4gpJuHLphu1MP5jxgn?si=f2e31449b1be41a4';
