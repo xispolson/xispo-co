@@ -1,10 +1,6 @@
 ---
 export const prerender = false;
-import { makePage } from '@keystatic/astro/ui';
-// virtual:keystatic-config is a Vite virtual module set up by the Keystatic integration
-// @ts-ignore
-import config from 'virtual:keystatic-config';
-const Keystatic = makePage(config);
+import { KeystaticApp } from '../../components/KeystaticApp';
 ---
 
 <!DOCTYPE html>
@@ -15,6 +11,6 @@ const Keystatic = makePage(config);
     <title>Keystatic</title>
   </head>
   <body>
-    <Keystatic client:only="react" />
+    <KeystaticApp client:only="react" />
   </body>
 </html>
