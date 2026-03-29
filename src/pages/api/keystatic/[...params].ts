@@ -1,15 +1,6 @@
-// Overrides the @keystatic/astro injected route to work with Astro v6.
-//
-// @keystatic/astro v5 reads credentials from context.locals.runtime.env,
-// but Astro v6 + @astrojs/cloudflare v13 replaced that with
-// `import { env } from "cloudflare:workers"` and made locals.runtime.env
-// a throwing getter. Even optional chaining triggers it before config.clientId
-// can short-circuit the lookup.
-//
-// Fix: wrap context in a Proxy that intercepts locals.runtime access and
-// returns the real Cloudflare env, then also pass credentials explicitly
-// via config so Keystatic finds them on the first try.
-
+// Compatibility shim: @keystatic/astro v5 reads context.locals.runtime.env,
+// but Astro v6 + @astrojs/cloudflare v13 replaced that with a throwing getter.
+// Fix: redefine `env` directly on the runtime object before Keystatic reads it.
 export const prerender = false;
 
 import { makeHandler } from '@keystatic/astro/api';
@@ -17,39 +8,22 @@ import { makeHandler } from '@keystatic/astro/api';
 import baseConfig from 'virtual:keystatic-config';
 
 export const ALL = async (context: any) => {
-  let config = baseConfig;
-  let proxiedContext = context;
-
   try {
     const { env } = await import('cloudflare:workers');
 
-    // Proxy locals so that accessing .runtime returns { env } instead of
-    // triggering Astro v6's intentional throwing getter.
-    const proxiedLocals = new Proxy(context.locals, {
-      get(target: any, prop: string | symbol) {
-        if (prop === 'runtime') return { env };
-        return Reflect.get(target, prop);
-      },
+    // locals.runtime is a non-replaceable data property (non-configurable,
+    // non-writable). But locals.runtime.env is a *separate* getter on the
+    // runtime object itself. If that getter is configurable we can redefine it
+    // with the real Cloudflare env — Keystatic then reads it normally.
+    const runtime = context.locals.runtime;
+    Object.defineProperty(runtime, 'env', {
+      value: env,
+      writable: true,
+      configurable: true,
     });
-
-    proxiedContext = new Proxy(context, {
-      get(target: any, prop: string | symbol) {
-        if (prop === 'locals') return proxiedLocals;
-        return Reflect.get(target, prop);
-      },
-    });
-
-    // Pass credentials explicitly too (belt-and-suspenders: config.clientId
-    // is checked before envVarsForCf in Keystatic's handler).
-    config = {
-      ...baseConfig,
-      clientId: (env as any).KEYSTATIC_GITHUB_CLIENT_ID ?? baseConfig.clientId,
-      clientSecret: (env as any).KEYSTATIC_GITHUB_CLIENT_SECRET ?? baseConfig.clientSecret,
-      secret: (env as any).KEYSTATIC_SECRET ?? baseConfig.secret,
-    };
   } catch {
-    // Not running in a Worker (local dev) — fall back to config as-is.
+    // Not in a Worker (local dev) or env is non-configurable — fall through.
   }
 
-  return makeHandler({ config })(proxiedContext);
+  return makeHandler({ config: baseConfig })(context);
 };
