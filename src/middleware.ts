@@ -9,8 +9,13 @@ import { defineMiddleware } from 'astro:middleware';
 export const onRequest = defineMiddleware(async (context, next) => {
   if (context.url.pathname.startsWith('/api/keystatic')) {
     const { env } = await import('cloudflare:workers');
-    // @ts-ignore — locals.runtime was removed in Astro v6 but Keystatic still needs it
-    context.locals.runtime = { env };
+    // locals.runtime is a read-only throwing getter in Astro v6 — override the
+    // property descriptor so Keystatic can read its env vars from locals.runtime.env
+    Object.defineProperty(context.locals, 'runtime', {
+      value: { env },
+      writable: true,
+      configurable: true,
+    });
   }
   return next();
 });
