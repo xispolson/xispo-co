@@ -1,8 +1,6 @@
 // @ts-check
 import { defineConfig, envField } from 'astro/config';
-import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
-import keystatic from '@keystatic/astro';
 import cloudflare from '@astrojs/cloudflare';
 
 // https://astro.build/config
@@ -11,9 +9,7 @@ export default defineConfig({
   output: 'server',
   adapter: cloudflare(),
   integrations: [
-    react(),
     sitemap(),
-    keystatic(),
   ],
   env: {
     schema: {

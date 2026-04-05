@@ -8,12 +8,14 @@ compatibility_flags = ["nodejs_compat"]
 binding = "R2_BUCKET"
 bucket_name = "xispo-journal-images"
 
-# Plain config vars (non-secret)
+# Plain config vars (non-secret) — update before deploying
 [vars]
 GITHUB_REPO   = "xispolson/xispo-co"
 GITHUB_BRANCH = "main"
-# R2_PUBLIC_URL = "https://pub-XXXX.r2.dev"  # set after creating the bucket
-# ALLOWED_SENDER = "you@youremail.com"        # set in dashboard as a plain var
+R2_PUBLIC_URL = "https://pub-dd22c33c1e3247f8ba1cf2bac1843004.r2.dev"  # your R2 bucket public URL
+ALLOWED_SENDER = "xispolson@gmail.com"            # your email address
+ALLOWED_PHONE  = "+15550000000"                 # your phone in E.164 (for SMS stub)
 
-# Secrets — set these via: wrangler secret put GITHUB_TOKEN
-# GITHUB_TOKEN  (PAT with Contents: read+write on the repo)
+# Secrets — set these via: wrangler secret put <NAME>
+# GITHUB_TOKEN       PAT with Contents: read+write on the repo
+# TWILIO_AUTH_TOKEN  Twilio webhook auth token (for SMS stub, when implemented)

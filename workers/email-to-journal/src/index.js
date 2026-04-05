@@ -1,24 +1,32 @@
 /**
  * email-to-journal Worker
  *
- * Receives inbound email via Cloudflare Email Routing, parses it with
- * postal-mime, uploads any image attachments to R2, then commits a new
- * journal markdown file to GitHub — triggering a Pages rebuild.
+ * Handles two entry points:
  *
- * Required bindings (set in wrangler.toml + Cloudflare dashboard):
+ * 1. email handler — receives inbound email via Cloudflare Email Routing,
+ *    parses it with postal-mime, uploads image attachments to R2, commits a
+ *    new journal .md file to GitHub (triggering a deploy).
+ *
+ * 2. fetch handler — HTTP endpoints:
+ *    POST /sms  — STUB for Twilio SMS-to-journal (not yet implemented).
+ *
+ * Required bindings (wrangler.toml + Cloudflare dashboard):
  *   R2_BUCKET       — R2 bucket binding (for image uploads)
- *   GITHUB_TOKEN    — secret: PAT with repo write access
+ *   GITHUB_TOKEN    — secret: PAT with repo Contents write access
  *   GITHUB_REPO     — var: "xispolson/xispo-co"
  *   GITHUB_BRANCH   — var: "main"
  *   R2_PUBLIC_URL   — var: public base URL for the R2 bucket
  *   ALLOWED_SENDER  — var: your email address (rejects everything else)
+ *   ALLOWED_PHONE   — var: your phone number in E.164 (e.g. +15551234567)
+ *   TWILIO_AUTH_TOKEN — secret: used to verify Twilio webhook signatures
  */
 
 import PostalMime from 'postal-mime';
 
 export default {
-  async email(message, env, ctx) {
-    // Only accept mail from yourself
+  // ── Email handler ──────────────────────────────────────────────────────────
+
+  async email(message, env, _ctx) {
     if (message.from !== env.ALLOWED_SENDER) {
       message.setReject(`Sender ${message.from} not allowed`);
       return;
@@ -34,7 +42,7 @@ export default {
     const slug = slugify(subject);
     const filePath = `src/content/journal/${dateStr}-${slug}.md`;
 
-    // Upload image attachments to R2, collect markdown references
+    // Upload image attachments to R2, collect markdown image references
     const imageLines = [];
     for (const att of email.attachments ?? []) {
       if (!att.mimeType?.startsWith('image/')) continue;
@@ -47,23 +55,53 @@ export default {
       imageLines.push(`![${alt}](${env.R2_PUBLIC_URL}/${key})`);
     }
 
-    // Prefer plain text body; fall back to stripped HTML
     const bodyText = email.text?.trim() ?? stripHtml(email.html ?? '');
     const fullBody = [bodyText, ...imageLines].filter(Boolean).join('\n\n');
+    const excerpt = buildExcerpt(bodyText);
 
-    // Build the excerpt (first non-empty line, max 160 chars)
-    const excerpt = bodyText.split('\n').find(l => l.trim()) ?? '';
-    const excerptTrimmed = excerpt.length > 160 ? excerpt.slice(0, 157) + '…' : excerpt;
-
-    const mdContent = buildFrontmatter({
-      title: subject,
-      date: dateStr,
-      excerpt: excerptTrimmed,
-    }) + '\n\n' + fullBody;
+    const mdContent =
+      buildFrontmatter({ title: subject, date: dateStr, excerpt }) +
+      '\n\n' +
+      fullBody;
 
     await commitToGitHub(env, filePath, mdContent, `Add journal post: ${subject}`);
   },
+
+  // ── HTTP handler ───────────────────────────────────────────────────────────
+
+  async fetch(request, env, _ctx) {
+    const url = new URL(request.url);
+
+    if (request.method === 'POST' && url.pathname === '/sms') {
+      return handleSms(request, env);
+    }
+
+    return new Response('Not found', { status: 404 });
+  },
 };
+
+// ── SMS stub ───────────────────────────────────────────────────────────────
+// TODO: implement SMS-to-journal via Twilio webhook
+//
+// To wire this up:
+//  1. Buy/configure a Twilio number and set its webhook to POST https://<worker-url>/sms
+//  2. Set ALLOWED_PHONE and TWILIO_AUTH_TOKEN as Worker secrets
+//  3. Validate the Twilio signature (X-Twilio-Signature header) using TWILIO_AUTH_TOKEN
+//  4. Parse the FormData: `Body` = SMS text, `From` = sender phone, `MediaUrl0` etc for MMS images
+//  5. Upload any MMS images to R2 (same pattern as the email handler)
+//  6. Call commitToGitHub() with the assembled markdown
+//  7. Return TwiML: <Response><Message>Posted!</Message></Response>
+
+async function handleSms(request, _env) {
+  // Stub — always reject until fully implemented
+  return new Response(
+    '<Response><Message>SMS posting not yet enabled.</Message></Response>',
+    {
+      status: 200,
+      headers: { 'Content-Type': 'text/xml' },
+    },
+  );
+}
 
 // ── Helpers ────────────────────────────────────────────────────────────────
 
@@ -99,6 +137,11 @@ function stripHtml(html) {
     .replace(/&gt;/g, '>')
     .replace(/&nbsp;/g, ' ')
     .trim();
+}
+
+function buildExcerpt(text) {
+  const first = text.split('\n').find((l) => l.trim()) ?? '';
+  return first.length > 160 ? first.slice(0, 157) + '…' : first;
 }
 
 function buildFrontmatter({ title, date, excerpt }) {

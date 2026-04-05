@@ -1,0 +1,44 @@
+backend:
+  name: github
+  repo: xispolson/xispo-co
+  branch: main
+  base_url: https://xispo.co
+  auth_endpoint: /oauth/auth
+
+media_folder: public/images/journal
+public_folder: /images/journal
+
+collections:
+  - name: journal
+    label: Journal
+    folder: src/content/journal
+    create: true
+    extension: md
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Date, name: date, widget: datetime, date_only: true, format: "YYYY-MM-DD" }
+      - { label: Excerpt, name: excerpt, widget: text, required: false }
+      - { label: Categories, name: categories, widget: list, default: [] }
+      - { label: Tags, name: tags, widget: list, default: [] }
+      - { label: Draft, name: draft, widget: boolean, default: false }
+      - { label: Body, name: body, widget: markdown }
+
+  - name: podcast
+    label: Podcast Episodes
+    folder: src/content/podcast
+    create: true
+    extension: md
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Date, name: date, widget: datetime, date_only: true, format: "YYYY-MM-DD" }
+      - { label: Episode Number, name: episodeNumber, widget: number, required: false }
+      - { label: Season, name: season, widget: number, required: false }
+      - { label: Audio URL, name: audioUrl, widget: string }
+      - { label: Duration, name: duration, widget: string, required: false, hint: "e.g. 1:23:45" }
+      - { label: "File Size (bytes)", name: fileSize, widget: number, required: false }
+      - { label: Description, name: description, widget: text }
+      - { label: Artwork, name: artwork, widget: string, required: false }
+      - { label: Draft, name: draft, widget: boolean, default: false }
+      - { label: Body (Show Notes), name: body, widget: markdown }
