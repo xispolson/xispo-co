@@ -1,0 +1,91 @@
+---
+export const prerender = true;
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Projects" description="Side projects and experiments by xispo.">
+  <div class="page-top">
+    <div class="container">
+      <div class="section__header">
+        <h1 class="section__title">Projects</h1>
+      </div>
+      <div class="projects-grid">
+        <a href="/projects/moo-deng" class="project-card">
+          <div class="project-card__img-wrap">
+            <img src="/images/moo-deng/moo-deng.jpg" alt="Moo Deng the pygmy hippo" />
+          </div>
+          <div class="project-card__body">
+            <h2 class="project-card__title">Moo Deng Me</h2>
+            <p class="project-card__desc">Generate a motivational poster starring Moo Deng, the world's most famous pygmy hippo. Pair a random photo with an inspirational quote and save it as a PNG.</p>
+            <span class="project-card__cta">Launch app →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: border-color 0.15s;
+    color: var(--text);
+  }
+  .project-card:hover {
+    border-color: var(--accent-dim);
+    text-decoration: none;
+  }
+
+  .project-card__img-wrap {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+  }
+  .project-card__img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  .project-card:hover .project-card__img-wrap img {
+    transform: scale(1.03);
+  }
+
+  .project-card__body {
+    padding: 1.25rem 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+  }
+
+  .project-card__title {
+    font-size: var(--size-xl);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .project-card__desc {
+    font-size: var(--size-sm);
+    color: var(--text-muted);
+    line-height: 1.6;
+    flex: 1;
+  }
+
+  .project-card__cta {
+    margin-top: 0.5rem;
+    font-size: var(--size-sm);
+    color: var(--accent);
+    font-weight: 500;
+  }
+</style>

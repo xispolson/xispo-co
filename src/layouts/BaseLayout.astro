@@ -62,6 +62,12 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
               <li><a href="/journal">Journal</a></li>
               <li><a href="/photos">Photos</a></li>
               <li><a href="/podcast">Podcast</a></li>
+              <li class="nav__item--has-dropdown">
+                <a href="/projects" class="nav__dropdown-toggle">Projects</a>
+                <ul class="nav__dropdown">
+                  <li><a href="/projects/moo-deng">Moo Deng Me</a></li>
+                </ul>
+              </li>
               <li><a href="/about">About</a></li>
             </ul>
           </div>
@@ -97,6 +103,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
           a.setAttribute('aria-current', 'page');
         }
       });
+
+      // Highlight "Projects" parent when on any /projects/* page
+      if (window.location.pathname.startsWith('/projects')) {
+        document.querySelector<HTMLAnchorElement>('.nav__dropdown-toggle')?.setAttribute('aria-current', 'page');
+      }
     </script>
   </body>
 </html>

@@ -1,0 +1,198 @@
+---
+export const prerender = true;
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const images = [
+  '_471e69c70a.jpg',
+  '00dispatch-moodeng-06-pjcl-mediumSquareAt3X.jpg',
+  '16_9_d662e87653.png',
+  '629e9285-a8ea-40b6-bb1a-0e65737cfe34.jpeg',
+  'AP24361659295588.jpg',
+  'G3G3_240917_meet_moo_deng.jpg',
+  'Mazurek_Moo_Deng_29.jpg',
+  'Moo_deng_%E0%B8%AB%E0%B8%A1%E0%B8%B9%E0%B9%80%E0%B8%94%E0%B9%89%E0%B8%87_(2024-09-11)_-_img_02.jpg',
+  'artboard-1-66f13ebee9335.png',
+  'c1_2882568.jpg',
+  'ca-times.brightspotcdn.jpg',
+  'e4d243ffb8eba6977bd538e262e7f3a7.jpg',
+  'hero-image.fill.size_1248x702.v1727332185.png',
+  'moo-deng-021826-2-fb5f2e2291634da0a413877a6e132ca6.jpg',
+  'moo-deng-gettyimages-2174555581.jpg',
+  'moo-deng-pygmy-hippo-1-1200x800.jpg',
+  'moo-deng-song.jpg',
+  'moo-deng.jpg',
+  'moo_deng01.png',
+  'moo_deng_scream_28eceb60df.webp',
+  'moodeng-bite.jpg',
+  'moodeng-page1.jpg',
+  'npr.brightspotcdn.jpg',
+  'p0jszlwt.jpg',
+  'rs_1200x1200-240913135035-moo-deng-thumb.jpg',
+  't-10-Khao-Kheow-Open-Zoo-posts-daily-schedule-of-%27Moo-Deng-change-based-on-her-mood-1.jpg',
+].map(f => `/images/moo-deng/${f}`);
+---
+
+<BaseLayout title="Moo Deng Me" description="Generate a motivational poster starring Moo Deng, the world's most famous pygmy hippo.">
+  <div class="page-top">
+    <div class="container container--narrow">
+      <div class="moodeng-header">
+        <a href="/projects" class="article-header__back">← Projects</a>
+        <h1>Moo Deng Me</h1>
+        <p class="moodeng-subtitle">Generate a motivational poster with the world's most famous pygmy hippo.</p>
+      </div>
+
+      <div id="app">
+        <button id="generate-btn" class="btn btn--accent btn--lg">Moo Deng Me!</button>
+        <div id="poster-wrap" hidden>
+          <div id="poster" class="poster">
+            <img id="poster-img" src="" alt="Moo Deng" />
+            <blockquote id="poster-quote"></blockquote>
+          </div>
+          <div class="poster-actions">
+            <button id="another-btn" class="btn">Another</button>
+            <button id="save-btn" class="btn btn--accent">Save as PNG</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<script define:vars={{ images }}>
+  const quotes = [
+    "It takes courage to grow up and become who you really are. — E.E. Cummings",
+    "Your self-worth is determined by you. You don't have to depend on someone telling you who you are. — Beyoncé",
+    "Nothing is impossible. The word itself says 'I'm possible!' — Audrey Hepburn",
+    "Keep your face always toward the sunshine, and shadows will fall behind you. — Walt Whitman",
+    "Attitude is a little thing that makes a big difference. — Winston Churchill",
+    "To bring about change, you must not be afraid to take the first step. We will fail when we fail to try. — Rosa Parks",
+    "All our dreams can come true, if we have the courage to pursue them. — Walt Disney",
+    "Don't sit down and wait for the opportunities to come. Get up and make them. — Madam C.J. Walker",
+    "Champions keep playing until they get it right. — Billie Jean King",
+    "I am lucky that whatever fear I have inside me, my desire to win is always stronger. — Serena Williams",
+    "You are never too old to set another goal or to dream a new dream. — C.S. Lewis",
+    "It is during our darkest moments that we must focus to see the light. — Aristotle",
+    "Believe you can and you're halfway there. — Theodore Roosevelt",
+    "Life shrinks or expands in proportion to one's courage. — Anaïs Nin",
+    "Try to be a rainbow in someone's cloud. — Maya Angelou",
+    "If you don't like the road you're walking, start paving another one. — Dolly Parton",
+    "Real change, enduring change, happens one step at a time. — Ruth Bader Ginsburg",
+    "All dreams are within reach. All you have to do is keep moving towards them. — Viola Davis",
+    "It is never too late to be what you might have been. — George Eliot",
+    "Give light and people will find the way. — Ella Baker",
+    "It always seems impossible until it's done. — Nelson Mandela",
+    "Don't count the days, make the days count. — Muhammad Ali",
+    "If you risk nothing, then you risk everything. — Geena Davis",
+    "Definitions belong to the definers, not the defined. — Toni Morrison",
+    "When you have a dream, you've got to grab it and never let go. — Carol Burnett",
+    "Never allow a person to tell you no who doesn't have the power to say yes. — Eleanor Roosevelt",
+    "When it comes to luck, you make your own. — Bruce Springsteen",
+    "If you're having fun, that's when the best memories are built. — Simone Biles",
+    "Failure is the condiment that gives success its flavor. — Truman Capote",
+    "Your story is what you have, what you will always have. It is something to own. — Michelle Obama",
+    "To live is the rarest thing in the world. Most people just exist. — Oscar Wilde",
+    "You define beauty yourself, society doesn't define your beauty. — Lady Gaga",
+    "Optimism is a happiness magnet. If you stay positive, good things and good people will be drawn to you. — Mary Lou Retton",
+    "You just gotta keep going and fighting for everything, and one day you'll get to where you want. — Naomi Osaka",
+    "If you prioritize yourself, you are going to save yourself. — Gabrielle Union",
+    "A problem is a chance for you to do your best. — Duke Ellington",
+    "You can't turn back the clock. But you can wind it up again. — Bonnie Prudden",
+    "There is no better compass than compassion. — Amanda Gorman",
+    "Stand before the people you fear and speak your mind – even if your voice shakes. — Maggie Kuhn",
+    "Vitality shows not only in the ability to persist but in the ability to start over. — F. Scott Fitzgerald",
+    "The most common way people give up their power is by thinking they don't have any. — Alice Walker",
+    "In three words I can sum up everything I've learned about life: It goes on. — Robert Frost",
+    "Sometimes the way forward is the way back. — Jim Henson",
+    "Tell the negative committee that meets inside your head to sit down and shut up. — Ann Bradford",
+    "You have power over your mind - not outside events. Realize this, and you will find strength. — Marcus Aurelius",
+  ];
+
+  function pick(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+  }
+
+  function generate() {
+    document.getElementById('poster-img').src = pick(images);
+    document.getElementById('poster-quote').textContent = pick(quotes);
+    document.getElementById('poster-wrap').hidden = false;
+    document.getElementById('generate-btn').hidden = true;
+  }
+
+  document.getElementById('generate-btn').addEventListener('click', generate);
+  document.getElementById('another-btn').addEventListener('click', generate);
+
+  document.getElementById('save-btn').addEventListener('click', () => {
+    const poster = document.getElementById('poster');
+    // Dynamically load html2canvas only when saving
+    const script = document.createElement('script');
+    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js';
+    script.onload = () => {
+      window.html2canvas(poster, { useCORS: true }).then(canvas => {
+        const link = document.createElement('a');
+        link.href = canvas.toDataURL('image/png');
+        link.download = 'moo-deng-poster.png';
+        link.click();
+      });
+    };
+    // If already loaded, call directly
+    if (window.html2canvas) {
+      script.onload();
+    } else {
+      document.head.appendChild(script);
+    }
+  });
+</script>
+
+<style>
+  .moodeng-header {
+    margin-bottom: 2.5rem;
+  }
+  .moodeng-header h1 {
+    font-size: var(--size-4xl);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    margin-top: 0.75rem;
+  }
+  .moodeng-subtitle {
+    margin-top: 0.5rem;
+    color: var(--text-muted);
+    font-size: var(--size-lg);
+  }
+
+  .btn--lg {
+    padding: 0.75rem 2rem;
+    font-size: var(--size-base);
+  }
+
+  .poster {
+    margin-top: 2rem;
+    background: #f9f9f4;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    max-width: 600px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+  }
+
+  .poster img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0;
+  }
+
+  .poster blockquote {
+    padding: 1.5rem 1.75rem;
+    font-size: var(--size-lg);
+    font-style: italic;
+    font-family: var(--font-serif);
+    color: #1a1a1a;
+    border-left: none;
+    line-height: 1.5;
+  }
+
+  .poster-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+  }
+</style>
