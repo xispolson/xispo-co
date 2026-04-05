@@ -5,6 +5,7 @@ excerpt: "Mandy the hound followed us around for a bit. She’s quite the advent
 categories: ["photos"]
 tags: ["instagram", "photos"]
 draft: false
+image: "/images/journal/201908-66705536_357947231569016_1241152504294689899_n_17846621164547659.jpg"
 ---
 
 ![A good weekend of flora, fauna, food and fun with Sandy.](/images/journal/201908-66705536_357947231569016_1241152504294689899_n_17846621164547659.jpg)

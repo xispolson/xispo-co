@@ -5,6 +5,7 @@ excerpt: "A perfect day to commune and appreciate what’s good in the world. Wi
 categories: []
 tags: []
 draft: false
+image: "https://pub-dd22c33c1e3247f8ba1cf2bac1843004.r2.dev/journal/2026-04-05-a-beautiful-day-to-gather-1.jpeg"
 ---
 
 A perfect day to commune and appreciate what’s good in the world. With
