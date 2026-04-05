@@ -49,19 +49,26 @@ const allCategories = [...new Set(allPosts.flatMap(p => p.data.categories))].sor
                 <time class="post-list__date" datetime={isoDate(post.data.date)}>
                   {formatDate(post.data.date)}
                 </time>
-                <div>
-                  <a href={`/journal/${post.id}`} class="post-list__title">
-                    {post.data.title}
-                  </a>
-                  {post.data.excerpt && (
-                    <p class="post-list__excerpt">{truncate(post.data.excerpt, 120)}</p>
-                  )}
-                  {post.data.categories.length > 0 && (
-                    <div class="post-list__tags" style="margin-top: 0.25rem;">
-                      {post.data.categories.map(cat => (
-                        <a href={`/journal/category/${cat}`} class="tag">{cat}</a>
-                      ))}
-                    </div>
+                <div class="post-list__content">
+                  <div class="post-list__text">
+                    <a href={`/journal/${post.id}`} class="post-list__title">
+                      {post.data.title}
+                    </a>
+                    {post.data.excerpt && (
+                      <p class="post-list__excerpt">{truncate(post.data.excerpt, 120)}</p>
+                    )}
+                    {post.data.categories.length > 0 && (
+                      <div class="post-list__tags" style="margin-top: 0.25rem;">
+                        {post.data.categories.map(cat => (
+                          <a href={`/journal/category/${cat}`} class="tag">{cat}</a>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                  {post.data.image && (
+                    <a href={`/journal/${post.id}`} class="post-list__thumb" tabindex="-1" aria-hidden="true">
+                      <img src={post.data.image} alt="" loading="lazy" decoding="async" />
+                    </a>
                   )}
                 </div>
               </li>

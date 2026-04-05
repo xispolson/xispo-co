@@ -19,8 +19,20 @@ collections:
       - { label: Title, name: title, widget: string }
       - { label: Date, name: date, widget: datetime, date_only: true, format: "YYYY-MM-DD" }
       - { label: Excerpt, name: excerpt, widget: text, required: false }
-      - { label: Categories, name: categories, widget: list, default: [] }
+      - label: Categories
+        name: categories
+        widget: select
+        multiple: true
+        default: []
+        options: [current-affairs, film, games, goings-on, music, photos, ramblings, random, travel, tri, uncategorized, webtech, wrong-number]
       - { label: Tags, name: tags, widget: list, default: [] }
+      - label: Image
+        name: image
+        widget: image
+        required: false
+        hint: "Optional thumbnail / featured image"
+        media_folder: /public/images/journal
+        public_folder: /images/journal
       - { label: Draft, name: draft, widget: boolean, default: false }
       - { label: Body, name: body, widget: markdown }
 

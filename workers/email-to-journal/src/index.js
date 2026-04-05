@@ -55,12 +55,13 @@ export default {
       imageLines.push(`![${alt}](${env.R2_PUBLIC_URL}/${key})`);
     }
 
-    const bodyText = email.text?.trim() ?? stripHtml(email.html ?? '');
+    const rawText = email.text?.trim() ?? stripHtml(email.html ?? '');
+    const { body: bodyText, categories, tags } = parseMetaLines(rawText);
     const fullBody = [bodyText, ...imageLines].filter(Boolean).join('\n\n');
     const excerpt = buildExcerpt(bodyText);
 
     const mdContent =
-      buildFrontmatter({ title: subject, date: dateStr, excerpt }) +
+      buildFrontmatter({ title: subject, date: dateStr, excerpt, categories, tags }) +
       '\n\n' +
       fullBody;
 
@@ -144,14 +145,44 @@ function buildExcerpt(text) {
   return first.length > 160 ? first.slice(0, 157) + '…' : first;
 }
 
-function buildFrontmatter({ title, date, excerpt }) {
+/**
+ * Strips leading meta lines from the email body.
+ * Recognised syntax (case-insensitive, anywhere in the body):
+ *   categories: photos, travel
+ *   tags: foo, bar, baz
+ * These lines are removed from the body before it's saved.
+ */
+function parseMetaLines(text) {
+  const lines = text.split('\n');
+  const remaining = [];
+  let categories = [];
+  let tags = [];
+
+  for (const line of lines) {
+    const catMatch = line.match(/^categories:\s*(.+)/i);
+    const tagMatch = line.match(/^tags:\s*(.+)/i);
+    if (catMatch) {
+      categories = catMatch[1].split(',').map((s) => s.trim()).filter(Boolean);
+    } else if (tagMatch) {
+      tags = tagMatch[1].split(',').map((s) => s.trim()).filter(Boolean);
+    } else {
+      remaining.push(line);
+    }
+  }
+
+  return { body: remaining.join('\n').trim(), categories, tags };
+}
+
+function buildFrontmatter({ title, date, excerpt, categories = [], tags = [] }) {
   const safe = (s) => s.replace(/"/g, '\\"');
+  const yamlList = (arr) =>
+    arr.length ? `[${arr.map((v) => `"${safe(v)}"`).join(', ')}]` : '[]';
   return `---
 title: "${safe(title)}"
 date: ${date}
 excerpt: "${safe(excerpt)}"
-categories: []
-tags: []
+categories: ${yamlList(categories)}
+tags: ${yamlList(tags)}
 draft: false
 ---`;
 }
