@@ -1,11 +1,13 @@
 ---
-title: "A beautiful day to gather"
+title: A beautiful day to gather
 date: 2026-04-05
-excerpt: "A perfect day to commune and appreciate what’s good in the world. With"
-categories: []
-tags: []
+excerpt: A perfect day to commune and appreciate what’s good in the world. With
+categories:
+  - goings-on
+tags:
+  - seder
+image: https://pub-dd22c33c1e3247f8ba1cf2bac1843004.r2.dev/journal/2026-04-05-a-beautiful-day-to-gather-1.jpeg
 draft: false
-image: "https://pub-dd22c33c1e3247f8ba1cf2bac1843004.r2.dev/journal/2026-04-05-a-beautiful-day-to-gather-1.jpeg"
 ---
 
 A perfect day to commune and appreciate what’s good in the world. With
