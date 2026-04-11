@@ -44,6 +44,7 @@ export default {
 
     // Upload image attachments to R2, collect markdown image references
     const imageLines = [];
+    let thumbnailUrl;
     for (const att of email.attachments ?? []) {
       if (!att.mimeType?.startsWith('image/')) continue;
       const ext = att.filename?.split('.').pop() ?? 'jpg';
@@ -51,8 +52,10 @@ export default {
       await env.R2_BUCKET.put(key, att.content, {
         httpMetadata: { contentType: att.mimeType },
       });
+      const url = `${env.R2_PUBLIC_URL}/${key}`;
+      if (!thumbnailUrl) thumbnailUrl = url;
       const alt = att.filename ?? `image ${imageLines.length + 1}`;
-      imageLines.push(`![${alt}](${env.R2_PUBLIC_URL}/${key})`);
+      imageLines.push(`![${alt}](${url})`);
     }
 
     const rawText = email.text?.trim() ?? stripHtml(email.html ?? '');
@@ -61,7 +64,7 @@ export default {
     const excerpt = buildExcerpt(bodyText);
 
     const mdContent =
-      buildFrontmatter({ title: subject, date: dateStr, excerpt, categories, tags }) +
+      buildFrontmatter({ title: subject, date: dateStr, excerpt, categories, tags, image: thumbnailUrl }) +
       '\n\n' +
       fullBody;
 
@@ -173,16 +176,17 @@ function parseMetaLines(text) {
   return { body: remaining.join('\n').trim(), categories, tags };
 }
 
-function buildFrontmatter({ title, date, excerpt, categories = [], tags = [] }) {
+function buildFrontmatter({ title, date, excerpt, categories = [], tags = [], image }) {
   const safe = (s) => s.replace(/"/g, '\\"');
   const yamlList = (arr) =>
     arr.length ? `[${arr.map((v) => `"${safe(v)}"`).join(', ')}]` : '[]';
+  const imageLine = image ? `\nimage: "${safe(image)}"` : '';
   return `---
 title: "${safe(title)}"
 date: ${date}
 excerpt: "${safe(excerpt)}"
 categories: ${yamlList(categories)}
-tags: ${yamlList(tags)}
+tags: ${yamlList(tags)}${imageLine}
 draft: false
 ---`;
 }
