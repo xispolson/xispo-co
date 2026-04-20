@@ -1,10 +1,15 @@
 ---
-title: "Lovely day for a bike ride"
-date: 2026-04-20
-excerpt: "First outside bike ride in a looooong time - thanks to Maz for dragging me"
-categories: []
-tags: []
-image: "https://pub-dd22c33c1e3247f8ba1cf2bac1843004.r2.dev/journal/2026-04-20-lovely-day-for-a-bike-ride-1.jpeg"
+title: Lovely day for a bike ride
+date: 2026-04-19
+excerpt: First outside bike ride in a looooong time - thanks to Maz for dragging me
+categories:
+  - goings-on
+  - photos
+tags:
+  - bike
+  - san francisco
+  - ggp
+image: https://pub-dd22c33c1e3247f8ba1cf2bac1843004.r2.dev/journal/2026-04-20-lovely-day-for-a-bike-ride-1.jpeg
 draft: false
 ---
 
