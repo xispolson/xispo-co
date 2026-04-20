@@ -1,10 +1,14 @@
 ---
-title: "Throwing Muses @ The Chapel 4/17/26"
-date: 2026-04-20
-excerpt: "Was a treat to see Kristin and co play on Friday. I could tell right away"
-categories: []
-tags: []
-image: "https://pub-dd22c33c1e3247f8ba1cf2bac1843004.r2.dev/journal/2026-04-20-throwing-muses-the-chapel-4-17-26-1.jpg"
+title: Throwing Muses @ The Chapel 4/17/26
+date: 2026-04-17
+excerpt: Was a treat to see Kristin and co play on Friday. I could tell right away
+categories:
+  - music
+  - goings-on
+tags:
+  - throwing muses
+  - music
+image: https://pub-dd22c33c1e3247f8ba1cf2bac1843004.r2.dev/journal/2026-04-20-throwing-muses-the-chapel-4-17-26-1.jpg
 draft: false
 ---
 
