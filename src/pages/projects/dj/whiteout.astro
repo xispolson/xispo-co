@@ -1,0 +1,507 @@
+---
+export const prerender = true;
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const ydnarFlyers = [
+  { file: 'ydnar-01.gif',       label: 'Ydnar #1' },
+  { file: 'whiteout_ydnar-flyer02.png', label: 'Ydnar #2' },
+  { file: 'ydnar-03.png',       label: 'Ydnar #3' },
+  { file: 'ydnar-april-27.gif', label: 'Ydnar — Apr 27' },
+  { file: 'ydnar-04.png',       label: 'Ydnar #4' },
+  { file: 'ydnar-05.gif',       label: 'Ydnar #5' },
+];
+
+const restFlyers = [
+  { file: 'whiteout_ydnar_flyer02.gif', date: 'May 2001 promo' },
+  { file: 'fs-flyer2.jpg',      date: 'Early 2001'     },
+  { file: 'fs-aug-03-01.jpg', date: 'Aug 3, 2001'  },
+  { file: 'fs-aug-10-01.jpg', date: 'Aug 10, 2001' },
+  { file: 'fs-aug-17-01.jpg', date: 'Aug 17, 2001' },
+  { file: 'fs-aug-24-01.jpg', date: 'Aug 24, 2001' },
+  { file: 'fs-sep-07-01.jpg', date: 'Sep 7, 2001'  },
+  { file: 'fs-sep-14-01.jpg', date: 'Sep 14, 2001' },
+  { file: 'fs-sep-21-01.jpg', date: 'Sep 21, 2001' },
+  { file: 'fs-sep-28-01.jpg', date: 'Sep 28, 2001' },
+  { file: 'fs-oct-04-01.jpg', date: 'Oct 4, 2001'  },
+  { file: 'fs-nov-02-01.jpg', date: 'Nov 2, 2001'  },
+  { file: 'fs-nov-08-01.jpg', date: 'Nov 8, 2001'  },
+  { file: 'fs-nov-23-01.jpg', date: 'Nov 23, 2001' },
+  { file: 'fs-flyer6.jpg',    date: 'Late 2001'    },
+  { file: 'fs-march-02.jpg',  date: 'Mar 2002'     },
+  { file: 'fs-flyer.jpg',     date: 'Spring 2002'  },
+  { file: 'fs-last.jpg',      date: 'Last night'   },
+];
+---
+
+<BaseLayout title="Whiteout" description="In 2001 and 2002, I hosted and DJ'd a Friday happy hour called Whiteout. It was at Sno-Drift in San Francisco, 2001–2002.">
+  <div class="page-top">
+    <div class="container">
+
+      <div class="event-header">
+        <a href="/projects/dj" class="back-link">← DJ</a>
+        <div class="event-dot"></div>
+        <h1 class="event-title">Whiteout</h1>
+        <p class="event-meta">Fridays, 7–10pm &nbsp;·&nbsp; Sno-Drift, 1830 3rd St @ 16th, SF &nbsp;·&nbsp; 2001–2002</p>
+      </div>
+
+      <div class="main-promo-wrap">
+        <img
+          src="/images/dj/whiteout_main_flyer.png"
+          alt="Whiteout biz card promo - 2001"
+          class="main-promo"
+        />
+      </div>
+
+      <div class="event-about container--narrow">
+        <p>
+          Weekly Friday happy hour at Sno-Drift — a club at Third and Sixteenth in what is now the Dogpatch.
+          Pete and I (and guests) would break in the weekend for friends and other guests.
+        </p>
+      </div>
+
+      <!-- ── Ydnar featured flyers ── -->
+      <div class="section-header">
+        <h2 class="section-title">Flyers by ydnar</h2>
+        <p class="section-sub">The incomparable <a href="https://ydnar.com" target="_blank" rel="noopener" class="ydnar-link">ydnar</a>
+        was kind enough to provide designs for some flyers.</p>
+      </div>
+
+      <div class="ydnar-grid">
+        {ydnarFlyers.map(({ file, label }) => (
+          <div class="ydnar-cell">
+            <button
+              class="flyer-trigger"
+              data-src={`/images/dj/whiteout-flyers/${file}`}
+              data-alt={`Whiteout flyer — ${label}`}
+              aria-label={`View ${label} full size`}
+            >
+              <img
+                src={`/images/dj/whiteout-flyers/${file}`}
+                alt={`Whiteout flyer — ${label}`}
+                loading="lazy"
+              />
+              <span class="expand-hint" aria-hidden="true">&#x2922;</span>
+            </button>
+          </div>
+        ))}
+      </div>
+
+      <!-- ── Carousel ── -->
+      <div class="section-header section-header--spaced">
+        <h2 class="section-title">More flyers</h2>
+        <span class="collage-count">{restFlyers.length} editions</span>
+      </div>
+
+      <div class="carousel-wrap">
+        <button class="carousel-btn carousel-btn--prev" aria-label="Previous flyers" id="prevBtn">&#8592;</button>
+        <div class="carousel-track-wrap">
+          <div class="carousel-track" id="carouselTrack">
+            {restFlyers.map(({ file, date }) => (
+              <div class="carousel-slide">
+                <button
+                  class="flyer-trigger"
+                  data-src={`/images/dj/whiteout-flyers/${file}`}
+                  data-alt={`Whiteout flyer — ${date}`}
+                  aria-label={`View ${date} flyer full size`}
+                >
+                  <img
+                    src={`/images/dj/whiteout-flyers/${file}`}
+                    alt={`Whiteout flyer — ${date}`}
+                    loading="lazy"
+                  />
+                  <span class="expand-hint" aria-hidden="true">&#x2922;</span>
+                </button>
+                <span class="flyer-date">{date}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <button class="carousel-btn carousel-btn--next" aria-label="Next flyers" id="nextBtn">&#8594;</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── Lightbox ── -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Flyer full view" hidden>
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-content">
+      <img class="lightbox-img" id="lightboxImg" src="" alt="" />
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-top {
+    padding-top: calc(var(--nav-height) + 3rem);
+    padding-bottom: 5rem;
+  }
+
+  .back-link {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: var(--text-muted);
+    font-size: var(--size-sm);
+  }
+  .back-link:hover { color: var(--text); text-decoration: none; }
+
+  /* ── Header ── */
+  .event-header { margin-bottom: 2.5rem; }
+
+  .event-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #e8e8e8;
+    margin-bottom: 1rem;
+  }
+
+  .event-title {
+    font-size: var(--size-5xl);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .event-meta {
+    font-family: var(--font-mono);
+    font-size: var(--size-xs);
+    color: var(--text-muted);
+    letter-spacing: 0.06em;
+  }
+
+  /* ── Main promo ── */
+  .main-promo-wrap {
+    background: #d8dde3;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin-bottom: 2.5rem;
+    max-width: 540px;
+  }
+
+  .main-promo {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  /* ── About blurb ── */
+  .event-about {
+    margin-bottom: 3.5rem;
+    padding: 0;
+  }
+
+  .event-about p {
+    color: var(--text-muted);
+    line-height: 1.75;
+  }
+
+  /* ── Section headers ── */
+  .section-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .section-header--spaced {
+    margin-top: 4rem;
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+  }
+
+  .section-title {
+    font-size: var(--size-lg);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.3rem;
+  }
+
+  .section-sub {
+    font-family: var(--font-mono);
+    font-size: var(--size-xs);
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+  }
+
+  .ydnar-link { color: var(--accent); }
+  .ydnar-link:hover { opacity: 0.8; }
+
+  .collage-count {
+    font-family: var(--font-mono);
+    font-size: var(--size-xs);
+    color: var(--text-muted);
+    letter-spacing: 0.06em;
+  }
+
+  /* ── Shared flyer trigger button ── */
+  .flyer-trigger {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: zoom-in;
+  }
+
+  .flyer-trigger img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.2s, transform 0.3s;
+  }
+
+  .expand-hint {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 4px;
+    background: rgba(0,0,0,0.55);
+    color: #fff;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+  }
+
+  .flyer-trigger:hover .expand-hint,
+  .flyer-trigger:focus-visible .expand-hint { opacity: 1; }
+  .flyer-trigger:hover img { opacity: 0.88; }
+
+  /* ── Ydnar featured grid ── */
+  .ydnar-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .ydnar-cell:nth-child(1),
+  .ydnar-cell:nth-child(2) { grid-column: span 2; }
+
+  .ydnar-cell {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background: #111;
+    border: 1px solid var(--border);
+  }
+
+  .ydnar-cell .flyer-trigger img { min-height: 200px; }
+
+  /* ── Carousel ── */
+  .carousel-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .carousel-track-wrap {
+    flex: 1;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+  }
+
+  .carousel-track {
+    display: flex;
+    gap: 0.75rem;
+    transition: transform 0.35s ease;
+    will-change: transform;
+  }
+
+  .carousel-slide {
+    flex: 0 0 calc(25% - 0.6rem);
+    min-width: 0;
+  }
+
+  .carousel-slide .flyer-trigger {
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+
+  .carousel-slide .flyer-trigger img {
+    object-fit: unset;
+    height: auto;
+    min-height: unset;
+  }
+
+  .flyer-date {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--text-faint);
+    letter-spacing: 0.04em;
+    margin-top: 0.35rem;
+    padding-left: 0.1rem;
+  }
+
+  .carousel-btn {
+    flex-shrink: 0;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    background: var(--surface-2, #1a1a1a);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-size: var(--size-base);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s, opacity 0.15s;
+    line-height: 1;
+  }
+
+  .carousel-btn:hover { background: var(--surface-3, #222); }
+  .carousel-btn:disabled { opacity: 0.25; cursor: default; }
+
+  /* ── Lightbox ── */
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lightbox[hidden] { display: none; }
+
+  .lightbox-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.88);
+    cursor: zoom-out;
+  }
+
+  .lightbox-content {
+    position: relative;
+    z-index: 1;
+    max-width: min(90vw, 1000px);
+    max-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lightbox-img {
+    display: block;
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 0 60px rgba(0,0,0,0.6);
+  }
+
+  .lightbox-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 2;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+    font-size: 1.4rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s;
+  }
+
+  .lightbox-close:hover { background: rgba(255,255,255,0.22); }
+
+  /* ── Responsive ── */
+  @media (max-width: 900px) {
+    .ydnar-grid { grid-template-columns: repeat(2, 1fr); }
+    .ydnar-cell:nth-child(1),
+    .ydnar-cell:nth-child(2) { grid-column: span 1; }
+    .carousel-slide { flex: 0 0 calc(33.333% - 0.5rem); }
+  }
+
+  @media (max-width: 600px) {
+    .event-title { font-size: var(--size-4xl); }
+    .ydnar-grid { grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+    .ydnar-cell .flyer-trigger img { min-height: 120px; }
+    .carousel-slide { flex: 0 0 calc(50% - 0.4rem); }
+    .carousel-btn { width: 2rem; height: 2rem; font-size: var(--size-sm); }
+  }
+</style>
+
+<script>
+  // ── Carousel ──────────────────────────────────────────────────────────────
+  const track    = document.getElementById('carouselTrack') as HTMLElement | null;
+  const prevBtn  = document.getElementById('prevBtn')       as HTMLButtonElement | null;
+  const nextBtn  = document.getElementById('nextBtn')       as HTMLButtonElement | null;
+
+  if (track && prevBtn && nextBtn) {
+    let index = 0;
+
+    const perView = () => window.innerWidth <= 600 ? 2 : window.innerWidth <= 900 ? 3 : 4;
+    const slides  = () => track.querySelectorAll<HTMLElement>('.carousel-slide');
+    const maxIdx  = () => Math.max(0, slides().length - perView());
+
+    function update() {
+      index = Math.min(index, maxIdx());
+      const slide = slides()[0];
+      const slideW = slide ? slide.offsetWidth : 0;
+      track.style.transform = `translateX(-${index * (slideW + 12)}px)`;
+      prevBtn!.disabled = index === 0;
+      nextBtn!.disabled = index >= maxIdx();
+    }
+
+    prevBtn.addEventListener('click', () => { index = Math.max(0, index - perView()); update(); });
+    nextBtn.addEventListener('click', () => { index = Math.min(maxIdx(), index + perView()); update(); });
+    window.addEventListener('resize', update);
+    update();
+  }
+
+  // ── Lightbox ──────────────────────────────────────────────────────────────
+  const lightbox  = document.getElementById('lightbox')        as HTMLElement | null;
+  const lbImg     = document.getElementById('lightboxImg')     as HTMLImageElement | null;
+  const lbClose   = document.getElementById('lightboxClose')   as HTMLButtonElement | null;
+  const lbBackdrop = document.getElementById('lightboxBackdrop') as HTMLElement | null;
+
+  function openLightbox(src: string, alt: string) {
+    if (!lightbox || !lbImg) return;
+    lbImg.src = src;
+    lbImg.alt = alt;
+    lightbox.hidden = false;
+    document.body.style.overflow = 'hidden';
+    lbClose?.focus();
+  }
+
+  function closeLightbox() {
+    if (!lightbox) return;
+    lightbox.hidden = true;
+    document.body.style.overflow = '';
+    lbImg && (lbImg.src = '');
+  }
+
+  document.querySelectorAll<HTMLButtonElement>('.flyer-trigger').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const src = btn.dataset.src ?? '';
+      const alt = btn.dataset.alt ?? '';
+      openLightbox(src, alt);
+    });
+  });
+
+  lbClose?.addEventListener('click', closeLightbox);
+  lbBackdrop?.addEventListener('click', closeLightbox);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox && !lightbox.hidden) closeLightbox();
+  });
+</script>

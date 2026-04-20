@@ -20,6 +20,33 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             <span class="project-card__cta">Launch app →</span>
           </div>
         </a>
+
+        <a href="/projects/dj" class="project-card">
+          <div class="project-card__img-wrap project-card__img-wrap--dark">
+            <div class="project-card__dj-hero">
+              <span class="project-card__dj-label">dj xis</span>
+            </div>
+          </div>
+          <div class="project-card__body">
+            <h2 class="project-card__title">dj xis</h2>
+            <p class="project-card__desc">Three SF events from the early 2000s — Whiteout, Breakout, and Console — plus a recorded mix from 2003.</p>
+            <span class="project-card__cta">View →</span>
+          </div>
+        </a>
+
+        {/* edgeglider card — commented out until ready
+        <a href="/projects/edgeglider" class="project-card">
+          <div class="project-card__img-wrap">
+            <img src="/images/edgeglider/home.jpg" alt="edgeglider.com splash page" />
+          </div>
+          <div class="project-card__body">
+            <h2 class="project-card__title">edgeglider.com</h2>
+            <p class="project-card__desc">A time capsule of my first personal website, hand-coded in HTML 4.0 and active from 2001 to 2004. Table layouts, image maps, and all.</p>
+            <span class="project-card__cta">View archive →</span>
+          </div>
+        </a>
+        */}
+
       </div>
     </div>
   </div>
@@ -87,5 +114,29 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     font-size: var(--size-sm);
     color: var(--accent);
     font-weight: 500;
+  }
+
+  .project-card__img-wrap--dark {
+    background: #0a0a0a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .project-card__dj-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .project-card__dj-label {
+    font-family: var(--font-mono);
+    font-size: var(--size-2xl);
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.08em;
+    opacity: 0.85;
   }
 </style>

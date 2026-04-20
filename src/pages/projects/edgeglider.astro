@@ -1,0 +1,263 @@
+---
+export const prerender = true;
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="edgeglider.com" description="A time capsule of edgeglider.com — xispo's first personal website, active 2001–2004.">
+  <div class="page-top">
+    <div class="container">
+
+      <div class="eg-header">
+        <a href="/projects" class="back-link">← Projects</a>
+        <div class="eg-title-block">
+          <span class="eg-ver">&gt; e d g e g l i d e r</span>
+          <span class="eg-sub">ver 1.0 &nbsp;·&nbsp; 2001 – 2004</span>
+        </div>
+        <p class="eg-tagline">This was my first personal website. A time capsule from the early web.</p>
+      </div>
+
+      <div class="eg-splash">
+        <img
+          src="/images/edgeglider/home.jpg"
+          alt="edgeglider.com splash page — a stylized illustration with navigation hotspots"
+          class="eg-splash__img"
+        />
+        <p class="eg-splash__caption">The splash page from edgeglider.com. The orange "pics" hotspot was the only link.</p>
+      </div>
+
+      <div class="eg-about">
+        <h2 class="eg-section-title">About the Site</h2>
+        <div class="eg-prose">
+          <p>
+            edgeglider.com was my corner of the early internet — hand-coded HTML, table-based layouts,
+            image maps, and all the hallmarks of web design circa 2001. It ran from approximately
+            2001 through 2004, living on shared hosting with an access log and everything.
+          </p>
+          <p>
+            The site had three main areas: a photo gallery (powered by Gallery 1.x, the PHP-based
+            open source gallery software of the era), pages for the DJ events I was running around
+            San Francisco, and whatever else seemed worth putting on the internet at the time.
+          </p>
+          <p>
+            The name "edgeglider" was a handle I used online before settling on "xispo."
+            The aesthetic was all black backgrounds, orange links, and images that were
+            sliced up in Photoshop's ImageReady and reassembled with HTML tables —
+            because that's just how you did it back then.
+          </p>
+        </div>
+      </div>
+
+      <hr class="eg-divider" />
+
+      <div class="eg-sections">
+
+        <section class="eg-card">
+          <div class="eg-card__icon">&#9835;</div>
+          <div class="eg-card__body">
+            <h3 class="eg-card__title">DJ Events</h3>
+            <p class="eg-card__desc">
+              The biggest part of the site documented three SF events I ran or
+              co-ran: <strong>Whiteout</strong> (weekly happy hours at Sno-Drift),
+              <strong>Breakout</strong> (at POW! Cocktail Lounge), and
+              <strong>Console</strong> (also at POW!, with PlayStation 2 and anime).
+              Each had its own page with flyers and mailing list links.
+            </p>
+            <a href="/projects/dj" class="eg-card__link">See the full DJ section →</a>
+          </div>
+        </section>
+
+        <section class="eg-card">
+          <div class="eg-card__icon">&#128247;</div>
+          <div class="eg-card__body">
+            <h3 class="eg-card__title">Photo Gallery</h3>
+            <p class="eg-card__desc">
+              The site ran Gallery 1.x to host photo albums — eleven numbered albums plus
+              named sets including <em>Japan 2004</em>, <em>Carnaval 2004</em>, and a wedding
+              shoot. This was before Flickr existed. The albums are preserved locally
+              but not republished here; the current photography lives on
+              <a href="/photos">Photos</a>.
+            </p>
+          </div>
+        </section>
+
+        <section class="eg-card">
+          <div class="eg-card__icon">&#128190;</div>
+          <div class="eg-card__body">
+            <h3 class="eg-card__title">Tech Stack</h3>
+            <p class="eg-card__desc">
+              HTML 4.0 Transitional. Table-based layout. Photoshop ImageReady slices.
+              Image maps. <code>bgcolor="#000000"</code>. A PHP Gallery install.
+              Shared hosting with a visible <code>access_log</code>.
+              It was a different time. This site is built with Astro and deployed
+              to Cloudflare Pages — progress, arguably.
+            </p>
+          </div>
+        </section>
+
+      </div>
+
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .page-top {
+    padding-top: calc(var(--nav-height) + 3rem);
+    padding-bottom: 4rem;
+  }
+
+  /* ── Header ── */
+  .back-link {
+    display: inline-block;
+    margin-bottom: 2rem;
+    color: var(--text-muted);
+    font-size: var(--size-sm);
+  }
+  .back-link:hover { color: var(--text); text-decoration: none; }
+
+  .eg-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .eg-title-block {
+    margin-bottom: 0.75rem;
+  }
+
+  .eg-ver {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: var(--size-3xl);
+    color: #ff9900;
+    letter-spacing: 0.08em;
+    line-height: 1.1;
+  }
+
+  .eg-sub {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: var(--size-sm);
+    color: var(--text-muted);
+    margin-top: 0.4rem;
+    letter-spacing: 0.1em;
+  }
+
+  .eg-tagline {
+    color: var(--text-muted);
+    font-size: var(--size-lg);
+    margin-top: 1rem;
+    max-width: 540px;
+  }
+
+  /* ── Splash image ── */
+  .eg-splash {
+    margin-bottom: 3rem;
+    background: #000;
+    border: 1px solid #2a2a2a;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+
+  .eg-splash__img {
+    display: block;
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 1.5rem 1.5rem 0;
+  }
+
+  .eg-splash__caption {
+    padding: 1rem 1.5rem;
+    font-size: var(--size-xs);
+    color: var(--text-faint);
+    font-family: var(--font-mono);
+    letter-spacing: 0.04em;
+  }
+
+  /* ── About ── */
+  .eg-section-title {
+    font-size: var(--size-xl);
+    color: #ff9900;
+    font-family: var(--font-mono);
+    letter-spacing: 0.06em;
+    margin-bottom: 1.25rem;
+  }
+
+  .eg-prose {
+    max-width: 660px;
+  }
+
+  .eg-prose p {
+    color: var(--text-muted);
+    line-height: 1.75;
+  }
+
+  /* ── Divider ── */
+  .eg-divider {
+    border: none;
+    border-top: 1px solid #2a2a2a;
+    margin: 3rem 0;
+  }
+
+  /* ── Section cards ── */
+  .eg-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .eg-card {
+    display: flex;
+    gap: 1.5rem;
+    background: #111;
+    border: 1px solid #2a2a2a;
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+  }
+
+  .eg-card__icon {
+    font-size: 1.75rem;
+    flex-shrink: 0;
+    line-height: 1;
+    margin-top: 0.15rem;
+    opacity: 0.7;
+  }
+
+  .eg-card__title {
+    font-size: var(--size-lg);
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+  }
+
+  .eg-card__desc {
+    color: var(--text-muted);
+    font-size: var(--size-sm);
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+  }
+
+  .eg-card__desc strong { color: var(--text); }
+  .eg-card__desc em { color: var(--text); font-style: italic; }
+  .eg-card__desc a { color: var(--accent); }
+
+  .eg-card__link {
+    font-size: var(--size-sm);
+    color: #ff9900;
+    font-weight: 500;
+  }
+  .eg-card__link:hover { text-decoration: underline; }
+
+  code {
+    background: #1a1a1a;
+    color: #ff9900;
+    font-size: 0.8em;
+    padding: 0.15em 0.4em;
+    border-radius: 3px;
+  }
+
+  @media (max-width: 480px) {
+    .eg-ver { font-size: var(--size-2xl); }
+    .eg-card { flex-direction: column; gap: 0.75rem; }
+    .eg-card__icon { font-size: 1.25rem; }
+  }
+</style>

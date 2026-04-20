@@ -173,14 +173,14 @@ hr {
 .nav__dropdown {
   display: none;
   position: absolute;
-  top: calc(100% + 0.5rem);
+  top: 100%;
   left: 50%;
   transform: translateX(-50%);
   min-width: 160px;
   background: var(--bg-raised);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  padding: 0.4rem 0;
+  padding: 0.5rem 0 0.4rem;
   list-style: none;
   z-index: 200;
   box-shadow: 0 8px 24px rgba(0,0,0,0.4);
