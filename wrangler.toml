@@ -1,0 +1,14 @@
+# Root wrangler.toml — used by astro dev (platformProxy) for local Cloudflare bindings.
+# The actual deployment config is generated at dist/server/wrangler.json by the build.
+#
+# After running `wrangler d1 create bobium-ratings`, replace the database_id below.
+# Initialize local DB: wrangler d1 execute bobium-ratings --local --file=scripts/init-d1.sql
+
+name = "xispo-co"
+compatibility_date = "2026-03-17"
+compatibility_flags = ["nodejs_compat"]
+
+[[d1_databases]]
+binding = "BOBIUM_DB"
+database_name = "bobium-ratings"
+database_id = "882dad8b-8adf-4c55-b586-9aee4e573be1"
