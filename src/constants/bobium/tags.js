@@ -29,7 +29,9 @@ export const STYLE_VIOLATION_TAGS = [
   { id: 'not-animorphic',     label: 'Not Animorphic',      emoji: '👁️' },
   { id: 'has-trademark',      label: 'Trademark/NSFW',      emoji: '™️' },
   { id: 'wrong-proportions',  label: 'Wrong Proportions',   emoji: '📐' },
-  { id: 'bad-limb-taper',     label: 'Bad Limb Taper',      emoji: '💪' },
+  { id: 'bad-limb-taper',     label: 'Bad Limbs',           emoji: '💪' },
+  { id: 'bad-eyes',           label: 'Bad Eyes',            emoji: '👁️' },
+  { id: 'has-text',           label: 'Text',                emoji: '🅰️' },
   { id: 'has-background',     label: 'Has Background',      emoji: '🌄' },
   { id: 'human-not-standing', label: 'Human Not Standing',  emoji: '🧍' },
 ]
